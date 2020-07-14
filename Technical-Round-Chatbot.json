@@ -1,0 +1,6271 @@
+{
+  "intents": [
+    {
+      "intent": "welcome",
+      "examples": [
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good afternoon"
+        },
+        {
+          "text": "welcome"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "webdev",
+      "examples": [
+        {
+          "text": "Web Developer"
+        },
+        {
+          "text": "Website"
+        },
+        {
+          "text": "Web Page"
+        },
+        {
+          "text": "Full Stack Developer"
+        },
+        {
+          "text": "Web Development"
+        },
+        {
+          "text": "Web Designer"
+        },
+        {
+          "text": "UI/UX Designer"
+        },
+        {
+          "text": "Dev Ops"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "name",
+      "examples": [
+        {
+          "text": "my name is Vishesh waghmare",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                11,
+                18
+              ]
+            }
+          ]
+        },
+        {
+          "text": "i'm ishali jadhav",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                5,
+                10
+              ]
+            },
+            {
+              "entity": "name",
+              "location": [
+                4,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "text": "myself ishali jadhav",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                8,
+                13
+              ]
+            },
+            {
+              "entity": "name",
+              "location": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "text": "my name is ishali jadhav",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                12,
+                17
+              ]
+            },
+            {
+              "entity": "name",
+              "location": [
+                11,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "text": "you can call me ishali",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                17,
+                22
+              ]
+            },
+            {
+              "entity": "name",
+              "location": [
+                16,
+                22
+              ]
+            }
+          ]
+        },
+        {
+          "text": "my name is ishali",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                12,
+                17
+              ]
+            },
+            {
+              "entity": "name",
+              "location": [
+                11,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "text": "i am ishali jadhav",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                6,
+                11
+              ]
+            },
+            {
+              "entity": "name",
+              "location": [
+                5,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "text": "hello i'm siddhant",
+          "mentions": [
+            {
+              "entity": "name",
+              "location": [
+                10,
+                18
+              ]
+            }
+          ]
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "datasci",
+      "examples": [
+        {
+          "text": "Data Learning Architect"
+        },
+        {
+          "text": "Python Developer"
+        },
+        {
+          "text": "Data Scientist"
+        },
+        {
+          "text": "Data Analyst"
+        },
+        {
+          "text": "ML Engineer"
+        },
+        {
+          "text": "Data Science"
+        },
+        {
+          "text": "Machine Learning Engineer"
+        },
+        {
+          "text": "ML Scientist"
+        },
+        {
+          "text": "Machine Learning Scientist"
+        },
+        {
+          "text": "Data Engineer"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "webdev",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "React js",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Angular",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Java",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "HTML",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "php",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "javascript",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "datasci",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "python",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "r",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "machine learning",
+          "synonyms": [
+            "ml",
+            "ai",
+            "artificial intelligence"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "spark",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "django",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "name",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Rajeev Ramesh",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ishali Jadhav",
+          "synonyms": [
+            "ishali"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Siddhant Singh",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vishesh Waghmare",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "score",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "0",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "reply",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "php 31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593199209974",
+      "context": {
+        "php_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_1_1593199356391",
+      "previous_sibling": "node_10_1593199266184"
+    },
+    {
+      "type": "standard",
+      "title": "php 31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great!"
+              },
+              {
+                "text": "Score = $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593199209974",
+      "context": {
+        "php_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_10_1593199266184"
+    },
+    {
+      "type": "standard",
+      "title": "ques32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1593027466336",
+      "context": {
+        "java_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_10_1593027803758",
+      "previous_sibling": "node_10_1593027651013"
+    },
+    {
+      "type": "standard",
+      "title": "ques32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1593027466336",
+      "context": {
+        "java_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_10_1593027651013"
+    },
+    {
+      "type": "standard",
+      "title": "php 34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593199782409",
+      "context": {
+        "score_php": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_7_1593199782409",
+      "previous_sibling": "node_6_1593199782409"
+    },
+    {
+      "type": "standard",
+      "title": "php 34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593199782409",
+      "context": {
+        "score_php": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_6_1593199782409"
+    },
+    {
+      "type": "standard",
+      "title": "html_quest22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. Which of the following is the attribute that specifies the column name from the data source object that supplies the bound data?"
+              },
+              {
+                "text": "1. dataFormatAs"
+              },
+              {
+                "text": "B. datasrc"
+              },
+              {
+                "text": "3. disabled"
+              },
+              {
+                "text": "4. datafld"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593008052823",
+      "context": {},
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_9_1593008322529",
+      "previous_sibling": "node_5_1593008207147"
+    },
+    {
+      "type": "standard",
+      "title": "html_quest21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. Which attribute specifies a unique alphanumeric identifier to be associated with an element? "
+              },
+              {
+                "text": "1 id"
+              },
+              {
+                "text": "2. article"
+              },
+              {
+                "text": "3.group"
+              },
+              {
+                "text": "4.class"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593008052823",
+      "context": {},
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_5_1593008207147"
+    },
+    {
+      "type": "standard",
+      "title": "django32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593154199719",
+      "context": {
+        "django_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_9_1593154361018",
+      "previous_sibling": "node_7_1593154350408"
+    },
+    {
+      "type": "standard",
+      "title": "django32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593154199719",
+      "context": {
+        "django_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_7_1593154350408"
+    },
+    {
+      "type": "standard",
+      "title": "r",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://www.houseofbots.com/images/news/3764/cover.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_10_1593014296780",
+      "context": {
+        "r_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1593113364168"
+      },
+      "conditions": "@datasci:r",
+      "dialog_node": "node_5_1593113157011",
+      "previous_sibling": "node_6_1593015110048"
+    },
+    {
+      "type": "standard",
+      "title": "python",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_10_1593014296780",
+      "context": {
+        "python_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1593015240802"
+      },
+      "conditions": "@datasci:python",
+      "dialog_node": "node_6_1593015110048",
+      "previous_sibling": "node_1_1593026459713"
+    },
+    {
+      "type": "standard",
+      "title": "spark",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://shrikar.com/wp-content/uploads/2018/10/Apache-Spark-e-Data-Science-.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_10_1593014296780",
+      "context": {
+        "spark_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1593154487815"
+      },
+      "conditions": "@datasci:spark",
+      "dialog_node": "node_6_1593113184492",
+      "previous_sibling": "node_4_1593113175665"
+    },
+    {
+      "type": "standard",
+      "title": "ml",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://www.pngitem.com/pimgs/m/346-3460443_machine-learning-course-near-me-machine-learning-logo.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_10_1593014296780",
+      "context": {
+        "ml_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593155200318"
+      },
+      "conditions": "@datasci:(machine learning)",
+      "dialog_node": "node_6_1593113276669",
+      "previous_sibling": "node_6_1593113184492"
+    },
+    {
+      "type": "standard",
+      "title": "django",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://static.djangoproject.com/img/logos/django-logo-negative.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_10_1593014296780",
+      "context": {
+        "django_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1593154137803"
+      },
+      "conditions": "@datasci:django",
+      "dialog_node": "node_4_1593113175665",
+      "previous_sibling": "node_5_1593113157011"
+    },
+    {
+      "type": "standard",
+      "title": "tech_question",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want to give a MCQ test for any other programming language?"
+              },
+              {
+                "text": "(This might improve your selection chances)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593014296780",
+      "dialog_node": "node_1_1593026459713"
+    },
+    {
+      "type": "standard",
+      "title": "spark31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593154930660",
+      "context": {
+        "spark_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_5_1593155017907",
+      "previous_sibling": "node_1_1593155008575"
+    },
+    {
+      "type": "standard",
+      "title": "spark31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593154930660",
+      "context": {
+        "spark_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_1_1593155008575"
+    },
+    {
+      "type": "standard",
+      "title": "score_31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593020766217",
+      "context": {
+        "ang_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_3_1593021533102",
+      "previous_sibling": "node_8_1593021390477"
+    },
+    {
+      "type": "standard",
+      "title": "score_31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great!"
+              },
+              {
+                "text": "Score: $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593020766217",
+      "context": {
+        "ang_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_8_1593021390477"
+    },
+    {
+      "type": "standard",
+      "title": "ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is the correct syntax for referring to an external script called “LFC.js”?"
+              },
+              {
+                "text": "1.<script ref=“LFC.js”>"
+              },
+              {
+                "text": "2.<script source=“LFC.js”>"
+              },
+              {
+                "text": "3.<script src=“LFC.js”>"
+              },
+              {
+                "text": "4.<script type=“LFC.js”>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593188539606",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_5_1593189678500",
+      "previous_sibling": "node_4_1593188712550"
+    },
+    {
+      "type": "standard",
+      "title": "ques 31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Inside which HTML element do we put the JavaScript?"
+              },
+              {
+                "text": "1.<script>"
+              },
+              {
+                "text": "2.<head>"
+              },
+              {
+                "text": "3.<meta>"
+              },
+              {
+                "text": "4.<style>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593188539606",
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_4_1593188712550"
+    },
+    {
+      "type": "standard",
+      "title": "rscore32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593113411045",
+      "context": {
+        "r_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_4_1593113530184",
+      "previous_sibling": "node_4_1593113515737"
+    },
+    {
+      "type": "standard",
+      "title": "rscore32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593113411045",
+      "context": {
+        "r_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_4_1593113515737"
+    },
+    {
+      "type": "standard",
+      "title": "ques31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593230689945",
+      "context": {
+        "react_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_4_1593230829036",
+      "previous_sibling": "node_5_1593230826486"
+    },
+    {
+      "type": "standard",
+      "title": "ques31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593230689945",
+      "context": {
+        "react_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_5_1593230826486"
+    },
+    {
+      "type": "standard",
+      "title": "ques32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593189135612",
+      "context": {
+        "js_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_7_1593189320402",
+      "previous_sibling": "node_3_1593189317509"
+    },
+    {
+      "type": "standard",
+      "title": "ques32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593189135612",
+      "context": {
+        "js_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_3_1593189317509"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593077970537",
+      "disabled": true,
+      "dialog_node": "response_4_1593078138601",
+      "previous_sibling": "slot_1_1593078148237"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1593077970537",
+      "variable": "$name",
+      "dialog_node": "slot_1_1593078148237"
+    },
+    {
+      "type": "standard",
+      "title": "final score",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You've successfully submitted your test."
+              },
+              {
+                "text": "Evaluating your scores..."
+              },
+              {
+                "text": "[Note: Blank space denotes that you have not appeared for that particular test.]"
+              },
+              {
+                "text": "Click on the Next button to proceed."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [
+              {
+                "text": "HTML: $html_score"
+              },
+              {
+                "text": "JavaScript: $js_score"
+              },
+              {
+                "text": "Java: $java_score"
+              },
+              {
+                "text": "Angular: $ang_score"
+              },
+              {
+                "text": "Php: $php_score"
+              },
+              {
+                "text": "React Js: $react_score"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593117636334",
+      "conditions": "@reply:no",
+      "dialog_node": "node_4_1593585329537",
+      "previous_sibling": "node_8_1593585247356"
+    },
+    {
+      "type": "standard",
+      "title": "another tech",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Don't select the programming language you have already appeared for."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593117636334",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1592832720417"
+      },
+      "conditions": "@reply:yes",
+      "dialog_node": "node_8_1593585247356"
+    },
+    {
+      "type": "standard",
+      "title": "ques31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593014931764",
+      "context": {
+        "java_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593026766098",
+      "previous_sibling": "node_6_1593017683240"
+    },
+    {
+      "type": "standard",
+      "title": "ques31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great!"
+              },
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593014931764",
+      "context": {
+        "java_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_6_1593017683240"
+    },
+    {
+      "type": "standard",
+      "title": "ques31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593190908822",
+      "context": {
+        "js_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_6_1593229641033",
+      "previous_sibling": "node_8_1593229546128"
+    },
+    {
+      "type": "standard",
+      "title": "ques31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593190908822",
+      "context": {
+        "js_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_8_1593229546128"
+    },
+    {
+      "type": "standard",
+      "title": "score_34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1593021152043",
+      "context": {
+        "ang_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_9_1593021896836",
+      "previous_sibling": "node_8_1593021862008"
+    },
+    {
+      "type": "standard",
+      "title": "score_34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1593021152043",
+      "context": {
+        "ang_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_8_1593021862008"
+    },
+    {
+      "type": "standard",
+      "title": "php 33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593199782409",
+      "context": {
+        "php_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593199782409",
+      "previous_sibling": "node_3_1593199782409"
+    },
+    {
+      "type": "standard",
+      "title": "php 33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score =  $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593199782409",
+      "context": {
+        "php_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593199782409"
+    },
+    {
+      "type": "standard",
+      "title": "ques31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593188712550",
+      "context": {
+        "js_score": 2
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593188906079",
+      "previous_sibling": "node_7_1593188846305"
+    },
+    {
+      "type": "standard",
+      "title": "ques31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great!"
+              },
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593188712550",
+      "context": {
+        "js_score": 3
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_7_1593188846305"
+    },
+    {
+      "type": "standard",
+      "title": "php 32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score =  $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593199508627",
+      "context": {
+        "php_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593199508631",
+      "previous_sibling": "node_3_1593199508631"
+    },
+    {
+      "type": "standard",
+      "title": "php 32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score =  $php_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593199508627",
+      "context": {
+        "php_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593199508631"
+    },
+    {
+      "type": "standard",
+      "title": "ang_ques22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. How do you share data between controller and view?"
+              },
+              {
+                "text": "1. using $ scope"
+              },
+              {
+                "text": "2. using services"
+              },
+              {
+                "text": "3. using Model"
+              },
+              {
+                "text": "4. using factory"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593020180740",
+      "context": {
+        "ang_score": 0
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_1_1593020660018",
+      "previous_sibling": "node_5_1593020577461"
+    },
+    {
+      "type": "standard",
+      "title": "ang_ques21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. Which directive initializes an AngularJS application?"
+              },
+              {
+                "text": "1. ng-init"
+              },
+              {
+                "text": "2. ng-app"
+              },
+              {
+                "text": "3. ngSrc"
+              },
+              {
+                "text": "4. ng-start"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593020180740",
+      "context": {
+        "ang_score": 1
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_5_1593020577461"
+    },
+    {
+      "type": "standard",
+      "title": "score32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593021951417",
+      "context": {
+        "python_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_7_1593025361899",
+      "previous_sibling": "node_5_1593025352640"
+    },
+    {
+      "type": "standard",
+      "title": "score32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593021951417",
+      "context": {
+        "python_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_5_1593025352640"
+    },
+    {
+      "type": "standard",
+      "title": "html_mcq_intro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "context": {
+        "html_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1593008052823"
+      },
+      "conditions": "@webdev:HTML",
+      "dialog_node": "node_1_1593007819571",
+      "previous_sibling": "node_10_1593117636334"
+    },
+    {
+      "type": "standard",
+      "title": "React_js intro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "context": {
+        "react_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593230354820"
+      },
+      "conditions": "@webdev:(React js)",
+      "dialog_node": "node_4_1593230295925",
+      "previous_sibling": "node_10_1593198564290"
+    },
+    {
+      "type": "standard",
+      "title": "Php intro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://lh3.googleusercontent.com/proxy/6JX35sYO3iTk9H66MA_MWsu-t2hrw466oD361XEV78m9I6fXklCkoKLFejWEjW2uYnO-a4t4RtwCutNthUSCRr9_eaZfAnl5fg_Z4S5bHtoKO4jK0v74rQaiufiOJ0lH9FA_nqa3SXZvqQk",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "context": {
+        "php_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1593198666718"
+      },
+      "conditions": "@webdev:php",
+      "dialog_node": "node_10_1593198564290",
+      "previous_sibling": "node_1_1593020004116"
+    },
+    {
+      "type": "standard",
+      "title": "Javascript intro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "context": {
+        "js_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1593188432034"
+      },
+      "conditions": "@webdev:javascript",
+      "dialog_node": "node_9_1593188366753",
+      "previous_sibling": "node_1_1593007819571"
+    },
+    {
+      "type": "standard",
+      "title": "Angular intro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "context": {
+        "ang_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1593020180740"
+      },
+      "conditions": "@webdev:Angular",
+      "dialog_node": "node_1_1593020004116",
+      "previous_sibling": "node_9_1593013900144"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "disabled": true,
+      "dialog_node": "response_3_1592832824446",
+      "previous_sibling": "node_4_1593230295925"
+    },
+    {
+      "type": "standard",
+      "title": "JAVA intro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer the following multiple-choice questions:"
+              },
+              {
+                "text": "Note: Reply with [1/2/3/4] only according to the question."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "source": "https://i.pinimg.com/originals/0b/1d/99/0b1d997d174bbb169b01b357fb9e2719.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "context": {
+        "java_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1593014245122"
+      },
+      "conditions": "@webdev:Java",
+      "dialog_node": "node_9_1593013900144",
+      "previous_sibling": "node_9_1593188366753"
+    },
+    {
+      "type": "standard",
+      "title": "tech_ques",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want to give a MCQ test for any other programming language?"
+              },
+              {
+                "text": "(This might improve your selection chances)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592832720417",
+      "dialog_node": "node_10_1593117636334"
+    },
+    {
+      "type": "standard",
+      "title": "ml31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1593155231777",
+      "context": {
+        "ml_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_7_1593159096334",
+      "previous_sibling": "node_9_1593159087622"
+    },
+    {
+      "type": "standard",
+      "title": "ml31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1593155231777",
+      "context": {
+        "ml_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_9_1593159087622"
+    },
+    {
+      "type": "standard",
+      "title": "ml_quest1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is a widely used and effective machine learning algorithm based on the idea of bagging?"
+              },
+              {
+                "text": "1. Decision Tree"
+              },
+              {
+                "text": "2. Regression"
+              },
+              {
+                "text": "3. Classification"
+              },
+              {
+                "text": "4. Random Forest"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593113276669",
+      "dialog_node": "node_1_1593155200318"
+    },
+    {
+      "type": "standard",
+      "title": "spark32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593154945943",
+      "context": {
+        "spark_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_1_1593155051304",
+      "previous_sibling": "node_3_1593155034041"
+    },
+    {
+      "type": "standard",
+      "title": "spark32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593154945943",
+      "context": {
+        "spark_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593155034041"
+    },
+    {
+      "type": "standard",
+      "title": "php ques1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q1. Which of the following provides access to the uploaded file in the temporary directory on the web server?"
+              },
+              {
+                "text": "1. $_FILES['file']['tmp_name']"
+              },
+              {
+                "text": "2. $_FILES['file']['name']"
+              },
+              {
+                "text": "3. $_FILES['file']['type']"
+              },
+              {
+                "text": "4. $_FILES['file']['size']"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593198564290",
+      "dialog_node": "node_6_1593198666718"
+    },
+    {
+      "type": "standard",
+      "title": "python_ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following functions is not defined under the sys module?"
+              },
+              {
+                "text": "1. sys.platform"
+              },
+              {
+                "text": "2. sys.path"
+              },
+              {
+                "text": "3. sys.readline"
+              },
+              {
+                "text": "4. sys.argv"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593019837658",
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_9_1593021951417",
+      "previous_sibling": "node_3_1593021938417"
+    },
+    {
+      "type": "standard",
+      "title": "python_ques31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is true about top-down design process?"
+              },
+              {
+                "text": "1. The details of a program design are addressed before the overall design"
+              },
+              {
+                "text": "2. Only the details of the program are addressed"
+              },
+              {
+                "text": "3. The overall design of the program is addressed before the details"
+              },
+              {
+                "text": "4. Only the design of the program is addressed"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593019837658",
+      "context": {},
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_3_1593021938417"
+    },
+    {
+      "type": "frame",
+      "title": "ang_ques1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q1. Angular Js is based on"
+              },
+              {
+                "text": "1. Decorator pattern"
+              },
+              {
+                "text": "2. MVC Architecture"
+              },
+              {
+                "text": "3. MVVM Architectural pattern"
+              },
+              {
+                "text": "4. Observer Pattern"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593020004116",
+      "context": {},
+      "conditions": "",
+      "dialog_node": "node_7_1593020180740"
+    },
+    {
+      "type": "standard",
+      "title": "django33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593154217969",
+      "context": {
+        "django_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_3_1593154383899",
+      "previous_sibling": "node_6_1593154375386"
+    },
+    {
+      "type": "standard",
+      "title": "django33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593154217969",
+      "context": {
+        "django_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_6_1593154375386"
+    },
+    {
+      "type": "standard",
+      "title": "python_score31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593021938417",
+      "context": {
+        "python_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_6_1593025338351",
+      "previous_sibling": "node_1_1593025322842"
+    },
+    {
+      "type": "frame",
+      "title": "pythonscore31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593021938417",
+      "context": {
+        "python_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_1_1593025322842"
+    },
+    {
+      "type": "frame",
+      "title": "python_ques1.",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which function overloads the + operator?"
+              },
+              {
+                "text": "1. __add__()"
+              },
+              {
+                "text": "2. __plus__()"
+              },
+              {
+                "text": "3. __sum__()"
+              },
+              {
+                "text": "4. none of the mentioned"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593015110048",
+      "context": {},
+      "dialog_node": "node_6_1593015240802"
+    },
+    {
+      "type": "standard",
+      "title": "score32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593008575194",
+      "context": {
+        "html_score": 1
+      },
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_6_1593009351982",
+      "previous_sibling": "node_3_1593009309625"
+    },
+    {
+      "type": "standard",
+      "title": "score32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593008575194",
+      "context": {
+        "html_score": 2
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_3_1593009309625"
+    },
+    {
+      "type": "standard",
+      "title": "score33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593022015848",
+      "context": {
+        "python_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_7_1593025545475",
+      "previous_sibling": "node_4_1593025537919"
+    },
+    {
+      "type": "standard",
+      "title": "score33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593022015848",
+      "context": {
+        "python_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_4_1593025537919"
+    },
+    {
+      "type": "standard",
+      "title": "ques 22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Which of the following is correct about features of JavaScript?"
+              },
+              {
+                "text": "1.It can not Handling dates and time."
+              },
+              {
+                "text": "2. JavaScript is a object-based scripting language."
+              },
+              {
+                "text": "3.JavaScript is not interpreter based scripting language."
+              },
+              {
+                "text": "4. All of the above"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593188432034",
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_9_1593188542714",
+      "previous_sibling": "node_10_1593188539606"
+    },
+    {
+      "type": "standard",
+      "title": "ques 21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which company developed JavaScript?"
+              },
+              {
+                "text": "1. Netscape"
+              },
+              {
+                "text": "2. Bell Labs"
+              },
+              {
+                "text": "3. Sun Microsystem"
+              },
+              {
+                "text": "4.IBM"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593188432034",
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_10_1593188539606"
+    },
+    {
+      "type": "standard",
+      "title": "ques31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593231269168",
+      "context": {
+        "react_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_7_1593231441351",
+      "previous_sibling": "node_7_1593231438575"
+    },
+    {
+      "type": "standard",
+      "title": "ques31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593231269168",
+      "context": {
+        "react_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_7_1593231438575"
+    },
+    {
+      "type": "standard",
+      "title": "django34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593154231945",
+      "context": {
+        "django_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_5_1593154409571",
+      "previous_sibling": "node_2_1593154396578"
+    },
+    {
+      "type": "standard",
+      "title": "django34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593154231945",
+      "context": {
+        "django_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_2_1593154396578"
+    },
+    {
+      "type": "standard",
+      "title": "ml_quest32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Suppose you have trained a logistic regression classifier and it outputs a new example x with a prediction ho(x) = 0.2. This means..."
+              },
+              {
+                "text": "1. Our estimate for P(y=1 | x)"
+              },
+              {
+                "text": "2. Our estimate for P(y=0 | x)"
+              },
+              {
+                "text": "3. Our estimate for P(x=1 | y)"
+              },
+              {
+                "text": "4. Our estimate for P(x=0 | y)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593155212079",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_10_1593155240503",
+      "previous_sibling": "node_2_1593155231777"
+    },
+    {
+      "type": "standard",
+      "title": "ml_quest31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "In which of the following cases will K-means clustering fail to give good results? 1) Data points with outliers 2) Data points with different densities 3) Data points with nonconvex shapes."
+              },
+              {
+                "text": "1. 1 and 2"
+              },
+              {
+                "text": "2. 2 and 3"
+              },
+              {
+                "text": "3. 1, 2, and 3"
+              },
+              {
+                "text": "4. 1 and 3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593155212079",
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_2_1593155231777"
+    },
+    {
+      "type": "standard",
+      "title": "ques22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. Which of the following API is a MUST for every ReactJS component?"
+              },
+              {
+                "text": "1. getInitialState"
+              },
+              {
+                "text": "2.render"
+              },
+              {
+                "text": "3. renderComponent"
+              },
+              {
+                "text": "4.None"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593230354820",
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_9_1593230482472",
+      "previous_sibling": "node_9_1593230479310"
+    },
+    {
+      "type": "standard",
+      "title": "ques21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. What are the limitations of ReactJS?"
+              },
+              {
+                "text": "1.React is only for view layer of the app so we still need the help of other technologies to get a complete tooling set for development"
+              },
+              {
+                "text": "2.React is using inline templating and JSX. This can seem awkward to some developers"
+              },
+              {
+                "text": "3.The library of react is too large"
+              },
+              {
+                "text": "4. All of these"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593230354820",
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_9_1593230479310"
+    },
+    {
+      "type": "standard",
+      "title": "django31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593154186762",
+      "context": {
+        "django_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_1_1593154337045",
+      "previous_sibling": "node_1_1593154325985"
+    },
+    {
+      "type": "standard",
+      "title": "django31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $django_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593154186762",
+      "context": {
+        "django_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_1_1593154325985"
+    },
+    {
+      "type": "standard",
+      "title": "python_ques34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "In order to store values in terms of key and value we use what core data type."
+              },
+              {
+                "text": "1. list"
+              },
+              {
+                "text": "2. tuple"
+              },
+              {
+                "text": "3. class"
+              },
+              {
+                "text": "4. dictionary"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593019930133",
+      "context": {
+        "score_python": 0
+      },
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_4_1593022334976",
+      "previous_sibling": "node_1_1593022015848"
+    },
+    {
+      "type": "standard",
+      "title": "python_ques33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Suppose there is a list such that: l=[2,3,4]. If we want to print this list in reverse order, which of the following methods should be used?"
+              },
+              {
+                "text": "1. reverse(l)"
+              },
+              {
+                "text": "2. list(reverse[(l)])"
+              },
+              {
+                "text": "3. reversed(l)"
+              },
+              {
+                "text": "4. list(reversed(l))"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593019930133",
+      "context": {
+        "python_score": 1
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_1_1593022015848"
+    },
+    {
+      "type": "standard",
+      "title": "spark_quest22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is false for Apache Spark?"
+              },
+              {
+                "text": "1. It provides high-level API in Java, Python, R, Scala"
+              },
+              {
+                "text": "2. It can be integrated with Hadoop and can process existing Hadoop HDFS data"
+              },
+              {
+                "text": "3. Spark is an open source framework which is written in Java"
+              },
+              {
+                "text": "4. Spark is 100 times faster than Bigdata Hadoop"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593154487815",
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_2_1593154901294",
+      "previous_sibling": "node_6_1593154888399"
+    },
+    {
+      "type": "standard",
+      "title": "spark_quest21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "For Regression problem which algorithm is not the solution?"
+              },
+              {
+                "text": "1. Logistic Regression"
+              },
+              {
+                "text": "2. Ridge Regression"
+              },
+              {
+                "text": "3. Decision Trees"
+              },
+              {
+                "text": "4. Gradient-Boosted Trees"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593154487815",
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_6_1593154888399"
+    },
+    {
+      "type": "frame",
+      "title": "final_score",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You've successfully submitted your test."
+              },
+              {
+                "text": "Evaluating your scores..."
+              },
+              {
+                "text": "[Note: Blank space denotes that you have not appeared for that particular test.]"
+              },
+              {
+                "text": "Click on the Next button to proceed."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [
+              {
+                "text": "Your Scores are:"
+              },
+              {
+                "text": "Python: $python_score"
+              },
+              {
+                "text": "R: $r_score"
+              },
+              {
+                "text": "Django: $django_score"
+              },
+              {
+                "text": "Spark: $spark_score"
+              },
+              {
+                "text": "Machine Learning: $ml_score"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593026459713",
+      "context": {},
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@reply:no",
+      "dialog_node": "node_5_1593191150550",
+      "previous_sibling": "node_8_1593026053987"
+    },
+    {
+      "type": "standard",
+      "title": "another_tech",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Don't select the programming language you have already appeared for"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593026459713",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593014296780"
+      },
+      "conditions": "@reply:yes",
+      "dialog_node": "node_8_1593026053987"
+    },
+    {
+      "type": "standard",
+      "title": "php ques22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. Which of the following statements invoke the exception class?"
+              },
+              {
+                "text": "1. throws new Exception();"
+              },
+              {
+                "text": "2. throw new Exception();"
+              },
+              {
+                "text": "3. new Exception();"
+              },
+              {
+                "text": "4. new throws Exception();"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593198666718",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_1_1593199782403",
+      "previous_sibling": "node_9_1593198899578"
+    },
+    {
+      "type": "standard",
+      "title": "php ques21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. What is the right way to clone an object?"
+              },
+              {
+                "text": "1. _clone(targetObject);"
+              },
+              {
+                "text": "2. destinationObject = _clone(targetObject);"
+              },
+              {
+                "text": "3. destinationObject = clone targetObject;"
+              },
+              {
+                "text": "4. destinationObject = clone(targetObject);"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593198666718",
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_9_1593198899578"
+    },
+    {
+      "type": "standard",
+      "title": "score_32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1593020970682",
+      "context": {
+        "ang_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_4_1593021654786",
+      "previous_sibling": "node_2_1593021574252"
+    },
+    {
+      "type": "standard",
+      "title": "score_32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1593020970682",
+      "context": {
+        "ang_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_2_1593021574252"
+    },
+    {
+      "type": "standard",
+      "title": "ml_quest22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is pca.components_ in Sklearn?"
+              },
+              {
+                "text": "1. Set of all eigen vectors for the projection space"
+              },
+              {
+                "text": "2. Matrix of principal components"
+              },
+              {
+                "text": "3. Result of the multiplication matrix"
+              },
+              {
+                "text": "4. None of the above options"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593155200318",
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_4_1593155222135",
+      "previous_sibling": "node_2_1593155212079"
+    },
+    {
+      "type": "standard",
+      "title": "ml_quest21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When performing regression or classification, which of the following is the correct way to preprocess the data?"
+              },
+              {
+                "text": "1. Normalize the data → PCA → training"
+              },
+              {
+                "text": "2. PCA → normalize PCA output → training"
+              },
+              {
+                "text": "3. Normalize the data → PCA → normalize PCA output → training"
+              },
+              {
+                "text": "4. None of the above"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593155200318",
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_2_1593155212079"
+    },
+    {
+      "type": "standard",
+      "title": "ang_ques34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. AngularJs support internationalization?"
+              },
+              {
+                "text": "1. True"
+              },
+              {
+                "text": "2. False"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593020660018",
+      "context": {},
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_8_1593021152043",
+      "previous_sibling": "node_4_1593021028827"
+    },
+    {
+      "type": "standard",
+      "title": "ans_ques33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Angular initializes based upon which of the following scenario?"
+              },
+              {
+                "text": "1. DOMContentLoaded event happens"
+              },
+              {
+                "text": "2. document.readyState is set to complete"
+              },
+              {
+                "text": "3. Both A and B"
+              },
+              {
+                "text": "4. None"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593020660018",
+      "context": {},
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_4_1593021028827"
+    },
+    {
+      "type": "standard",
+      "title": "spark34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593154966975",
+      "context": {
+        "spark_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_6_1593155103916",
+      "previous_sibling": "node_3_1593155092615"
+    },
+    {
+      "type": "standard",
+      "title": "spark34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593154966975",
+      "context": {
+        "spark_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593155092615"
+    },
+    {
+      "type": "standard",
+      "title": "django_quest1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is the Django shortcut method to more easily render an HTML response?"
+              },
+              {
+                "text": "1. render_to_html"
+              },
+              {
+                "text": "2. render_to_response"
+              },
+              {
+                "text": "3. response_render"
+              },
+              {
+                "text": "4. render"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593113175665",
+      "dialog_node": "node_3_1593154137803"
+    },
+    {
+      "type": "standard",
+      "title": "JAVA ques22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. Which of the following option leads to the portability and security of Java?"
+              },
+              {
+                "text": "1. Dynamic binding between objects"
+              },
+              {
+                "text": "2. Bytecode is executed by JVM"
+              },
+              {
+                "text": "3. The applet makes the Java code secure and portable\n\n"
+              },
+              {
+                "text": "4. Use of exception handling"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593014245122",
+      "conditions": "@sys-number !=4",
+      "dialog_node": "node_5_1593014510945",
+      "previous_sibling": "node_7_1593014484582"
+    },
+    {
+      "type": "standard",
+      "title": "JAVA ques 21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q2. Which of the following is a valid declaration of a char?"
+              },
+              {
+                "text": "1.  char ca = 'tea';"
+              },
+              {
+                "text": "2. char ch = '\\utea';"
+              },
+              {
+                "text": "3. char cr = \\u0223;"
+              },
+              {
+                "text": " 4.char cc = '\\itea';"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593014245122",
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_7_1593014484582"
+    },
+    {
+      "type": "standard",
+      "title": "ques32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593230693443",
+      "context": {
+        "react_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_7_1593231064732",
+      "previous_sibling": "node_3_1593231061625"
+    },
+    {
+      "type": "standard",
+      "title": "ques 32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593230693443",
+      "context": {
+        "react_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_3_1593231061625"
+    },
+    {
+      "type": "standard",
+      "title": "ques31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Why so JavaScript and Java have similar name?"
+              },
+              {
+                "text": "1.JavaScript is a stripped-down version of Java"
+              },
+              {
+                "text": "2.JavaScript's syntax is loosely based on Java's"
+              },
+              {
+                "text": "3.They both originated on the island of Java"
+              },
+              {
+                "text": "4.None of the above"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593188542714",
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_6_1593190908822",
+      "previous_sibling": "node_4_1593189135612"
+    },
+    {
+      "type": "standard",
+      "title": "ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is the correct syntax to display “Letsfindcourse” in an alert box using JavaScript?"
+              },
+              {
+                "text": "1.alert-box(“Letsfindcourse”);"
+              },
+              {
+                "text": "2.confirm(\"Letsfindcourse\");"
+              },
+              {
+                "text": "3. msgbox(“Letsfindcourse”);"
+              },
+              {
+                "text": "4.alert(“Letsfindcourse”);"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593188542714",
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_4_1593189135612"
+    },
+    {
+      "type": "standard",
+      "title": "r_quest32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following finds the maximum value in the vector x, exclude missing values?"
+              },
+              {
+                "text": "1. rm(x)"
+              },
+              {
+                "text": "2. all(x)"
+              },
+              {
+                "text": "3. max(x, na.rm=TRUE)"
+              },
+              {
+                "text": "4. x%in%y"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593113376049",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593113411045",
+      "previous_sibling": "node_6_1593113397391"
+    },
+    {
+      "type": "standard",
+      "title": "r_quest31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many control statements are present in R?"
+              },
+              {
+                "text": "1. 6"
+              },
+              {
+                "text": "2. 7"
+              },
+              {
+                "text": "3. 8"
+              },
+              {
+                "text": "4. 9"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593113376049",
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_6_1593113397391"
+    },
+    {
+      "type": "standard",
+      "title": "python_ques22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following functions returns a dictionary mapping group names to group numbers?"
+              },
+              {
+                "text": "1. re.compile.group"
+              },
+              {
+                "text": "2. re.compile.groupindex"
+              },
+              {
+                "text": "3. re.compile.indexre.compile.index"
+              },
+              {
+                "text": "4. re.compile.indexgroup"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593015240802",
+      "context": {
+        "score_python": 0
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593019930133",
+      "previous_sibling": "node_3_1593019837658"
+    },
+    {
+      "type": "standard",
+      "title": "python_ques21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is the biggest reason for the use of polymorphism?"
+              },
+              {
+                "text": "1. It allows the programmer to think at a more abstract level"
+              },
+              {
+                "text": "2. There is less program code to write"
+              },
+              {
+                "text": "3. The program will have a more elegant design and will be easier to maintain and update"
+              },
+              {
+                "text": "4. Program code takes up less space"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593015240802",
+      "context": {},
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593019837658"
+    },
+    {
+      "type": "standard",
+      "title": "ml34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593159138831",
+      "context": {
+        "ml_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_7_1593159191726",
+      "previous_sibling": "node_2_1593159178871"
+    },
+    {
+      "type": "standard",
+      "title": "ml34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593159138831",
+      "context": {
+        "ml_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_2_1593159178871"
+    },
+    {
+      "type": "standard",
+      "title": "django_quest22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is the Django command to start a new app named ‘users’ in an existing project?"
+              },
+              {
+                "text": "1. manage.py –newapp users"
+              },
+              {
+                "text": "2. manage.py newapp users"
+              },
+              {
+                "text": "3. manage.py –startapp users"
+              },
+              {
+                "text": "4. manage.py startapp users"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593154137803",
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_10_1593154168754",
+      "previous_sibling": "node_8_1593154154204"
+    },
+    {
+      "type": "standard",
+      "title": "django_quest21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "By using django.contrib.humanize, you can use the following filter in your template to display the number 3 as three."
+              },
+              {
+                "text": "1. apnumber"
+              },
+              {
+                "text": "2. intcomma"
+              },
+              {
+                "text": "3. intword"
+              },
+              {
+                "text": "4. ordinal"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593154137803",
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_8_1593154154204"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You successfully submitted your test."
+              },
+              {
+                "text": "Evaluating your scores..."
+              },
+              {
+                "text": "[Note: Blank space denotes that you have not appeared for that particular test.]"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [
+              {
+                "text": "Your Scores are:"
+              },
+              {
+                "text": "Python: $score_python"
+              },
+              {
+                "text": "R: $r_score"
+              },
+              {
+                "text": "Django: $django_score"
+              },
+              {
+                "text": "Spark: $spark_score"
+              },
+              {
+                "text": "Machine Learning: $ml_score"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593191150550",
+      "context": {},
+      "disabled": true,
+      "conditions": "$score_python",
+      "dialog_node": "response_9_1593426068048"
+    },
+    {
+      "type": "standard",
+      "title": "html_quest1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q1. HTML uses "
+              },
+              {
+                "text": "1. Fixed tags defined by the language"
+              },
+              {
+                "text": "2. Pre-specified tags"
+              },
+              {
+                "text": "3.Both"
+              },
+              {
+                "text": "4.None"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593007819571",
+      "context": {
+        "score_html": 0
+      },
+      "dialog_node": "node_4_1593008052823"
+    },
+    {
+      "type": "standard",
+      "title": "JAVA ques1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q1.  _____ is used to find and fix bugs in the Java programs."
+              },
+              {
+                "text": "1.JVM"
+              },
+              {
+                "text": "2.JRE\n"
+              },
+              {
+                "text": "3.JDK\n"
+              },
+              {
+                "text": "4.JDB"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593013900144",
+      "dialog_node": "node_7_1593014245122"
+    },
+    {
+      "type": "standard",
+      "title": "django_quest34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "In Django how would you retrieve all the ‘User’ records from a given database?"
+              },
+              {
+                "text": "1. User.objects.all()"
+              },
+              {
+                "text": "2. Users.objects.all()"
+              },
+              {
+                "text": "3. User.all_records()"
+              },
+              {
+                "text": "4. User.object.all()"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593154168754",
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_9_1593154231945",
+      "previous_sibling": "node_5_1593154217969"
+    },
+    {
+      "type": "standard",
+      "title": "django_quest33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is the Django command to view a database schema of an existing (or legacy) database?"
+              },
+              {
+                "text": "1. manage.py legacydb"
+              },
+              {
+                "text": "2. django-admin.py schemadump"
+              },
+              {
+                "text": "3. manage.py inspect"
+              },
+              {
+                "text": "4. manage.py inspectdb"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593154168754",
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_5_1593154217969"
+    },
+    {
+      "type": "standard",
+      "title": "django_quest32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What happens if MyObject.objects.get() is called with parameters that do not match an existing item in the database?"
+              },
+              {
+                "text": "1. The Http404 exception is raised"
+              },
+              {
+                "text": "2. The DatabaseError exception is raised"
+              },
+              {
+                "text": "3. The MyObject.DoesNotExist exception is raised"
+              },
+              {
+                "text": "4. The object is created and returned"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1593154154204",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_6_1593154199719",
+      "previous_sibling": "node_6_1593154186762"
+    },
+    {
+      "type": "standard",
+      "title": "django_quest31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is the most easiest, fastest, and most stable deployment choice in most cases with Django?"
+              },
+              {
+                "text": "1. FastCGI"
+              },
+              {
+                "text": "2. mod_wsgi"
+              },
+              {
+                "text": "3. SCGI"
+              },
+              {
+                "text": "4. AJP"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1593154154204",
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_6_1593154186762"
+    },
+    {
+      "type": "standard",
+      "title": "php ques 34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Which one of the following PHP function is used to determine a file’s last access time?"
+              },
+              {
+                "text": "1. fileltime()"
+              },
+              {
+                "text": "2. filectime()"
+              },
+              {
+                "text": "3. fileatime()"
+              },
+              {
+                "text": "4. filetime()"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593199782403",
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_5_1593199782409",
+      "previous_sibling": "node_2_1593199782409"
+    },
+    {
+      "type": "standard",
+      "title": "php ques 33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Which one of the following filter is used to filter several variables with the same or different filters?"
+              },
+              {
+                "text": "1. filter_var_array()"
+              },
+              {
+                "text": "2. filter_var()"
+              },
+              {
+                "text": "3. filter_input"
+              },
+              {
+                "text": "4. filter_input_array"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593199782403",
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_2_1593199782409"
+    },
+    {
+      "type": "standard",
+      "title": "score_33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593021028827",
+      "context": {
+        "ang_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_7_1593021811026",
+      "previous_sibling": "node_9_1593021738099"
+    },
+    {
+      "type": "standard",
+      "title": "score_33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ang_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593021028827",
+      "context": {
+        "ang_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_9_1593021738099"
+    },
+    {
+      "type": "standard",
+      "title": "ang_ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Can an HTML page have multiple “ng-app” directive for bootstrapping multiple AngularJS application?"
+              },
+              {
+                "text": "1. Yes"
+              },
+              {
+                "text": "2. No"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593020577461",
+      "context": {},
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_8_1593020970682",
+      "previous_sibling": "node_7_1593020766217"
+    },
+    {
+      "type": "standard",
+      "title": "ang_ques31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Angular 1.x is written in"
+              },
+              {
+                "text": "1. JavaScript"
+              },
+              {
+                "text": "2. Java"
+              },
+              {
+                "text": "3. TypeScript"
+              },
+              {
+                "text": "4. None of the above"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593020577461",
+      "context": {
+        "ang_score": 2
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_7_1593020766217"
+    },
+    {
+      "type": "standard",
+      "title": "ques32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593231272407",
+      "context": {
+        "react_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_2_1593231660981",
+      "previous_sibling": "node_5_1593231657655"
+    },
+    {
+      "type": "standard",
+      "title": "ques32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $react_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593231272407",
+      "context": {
+        "react_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_5_1593231657655"
+    },
+    {
+      "type": "standard",
+      "title": "rscore33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593113428754",
+      "context": {
+        "r_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593113561366",
+      "previous_sibling": "node_5_1593113551497"
+    },
+    {
+      "type": "standard",
+      "title": "rscore33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593113428754",
+      "context": {
+        "r_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_5_1593113551497"
+    },
+    {
+      "type": "standard",
+      "title": "html_quest32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "5.Which of the following is the attribute that is used to set a global identifier for a microdata item?"
+              },
+              {
+                "text": "1.key"
+              },
+              {
+                "text": "2.  itemid"
+              },
+              {
+                "text": "3.Group"
+              },
+              {
+                "text": "4.class"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593008207147",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_1_1593008575194",
+      "previous_sibling": "node_3_1593008417339"
+    },
+    {
+      "type": "standard",
+      "title": "html_quest31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. The accesskey attribute specifies a keyboard navigation accelerator for the element."
+              },
+              {
+                "text": "1. True"
+              },
+              {
+                "text": "2. False"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593008207147",
+      "context": {},
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593008417339"
+    },
+    {
+      "type": "standard",
+      "title": "Ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Which of the following is a valid long literal?"
+              },
+              {
+                "text": "\n1. 0xnf029L"
+              },
+              {
+                "text": "2. 904423"
+              },
+              {
+                "text": "3. L990023"
+              },
+              {
+                "text": "4. ABH8097"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593014484582",
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_9_1593028018709",
+      "previous_sibling": "node_10_1593014931764"
+    },
+    {
+      "type": "standard",
+      "title": "ques31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. What is the return type of the hashCode() method in the Object class?"
+              },
+              {
+                "text": "1.int"
+              },
+              {
+                "text": "2. Object"
+              },
+              {
+                "text": "3. long"
+              },
+              {
+                "text": "4. void"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1593014484582",
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_10_1593014931764"
+    },
+    {
+      "type": "standard",
+      "title": "php ques 32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. What is the description of Error level E_ERROR?"
+              },
+              {
+                "text": "1. Fatal run-time error"
+              },
+              {
+                "text": "2. Near-fatal error"
+              },
+              {
+                "text": "3. Compile-time error"
+              },
+              {
+                "text": "4. Fatal Compile-time error"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593198899578",
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_2_1593199508627",
+      "previous_sibling": "node_3_1593199209974"
+    },
+    {
+      "type": "standard",
+      "title": "php ques 31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. How to define a function in PHP?"
+              },
+              {
+                "text": "1. function {function body}"
+              },
+              {
+                "text": "2. data type functionName(parameters) {function body}"
+              },
+              {
+                "text": "3. functionName(parameters) {function body}"
+              },
+              {
+                "text": "4. function functionName(parameters) {function body}"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593198899578",
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_3_1593199209974"
+    },
+    {
+      "type": "standard",
+      "title": "ques32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593189678500",
+      "context": {
+        "js_score": 1
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_6_1593189914615",
+      "previous_sibling": "node_8_1593189833899"
+    },
+    {
+      "type": "standard",
+      "title": "ques32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $js_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593189678500",
+      "context": {
+        "js_score": 2
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_8_1593189833899"
+    },
+    {
+      "type": "standard",
+      "title": "ml_quest34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A model of language consists of the categories which does not include?"
+              },
+              {
+                "text": "1. Language units"
+              },
+              {
+                "text": "2. Role structure of units"
+              },
+              {
+                "text": "3. System constraints"
+              },
+              {
+                "text": "4. Structural units"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593155222135",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_4_1593159138831",
+      "previous_sibling": "node_6_1593159129917"
+    },
+    {
+      "type": "standard",
+      "title": "ml_quest33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Among the following which is not a horn clause?"
+              },
+              {
+                "text": "1. p"
+              },
+              {
+                "text": "2. Øp V q"
+              },
+              {
+                "text": "3. p → q"
+              },
+              {
+                "text": "4. p → Øq"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_4_1593155222135",
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_6_1593159129917"
+    },
+    {
+      "type": "standard",
+      "title": "score34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593022334976",
+      "context": {
+        "python_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_4_1593025573066",
+      "previous_sibling": "node_6_1593025554665"
+    },
+    {
+      "type": "standard",
+      "title": "score34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $python_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593022334976",
+      "context": {
+        "python_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_6_1593025554665"
+    },
+    {
+      "type": "standard",
+      "title": "spark33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593154956955",
+      "context": {
+        "spark_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_1_1593155076960",
+      "previous_sibling": "node_3_1593155068135"
+    },
+    {
+      "type": "standard",
+      "title": "spark33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $spark_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593154956955",
+      "context": {
+        "spark_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_3_1593155068135"
+    },
+    {
+      "type": "standard",
+      "title": "rscore34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593113442339",
+      "context": {
+        "r_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_9_1593113595872",
+      "previous_sibling": "node_6_1593113581655"
+    },
+    {
+      "type": "standard",
+      "title": "rscore34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593113442339",
+      "context": {
+        "r_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_6_1593113581655"
+    },
+    {
+      "type": "standard",
+      "title": "ques32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593028240083",
+      "context": {
+        "java_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_10_1593028384545",
+      "previous_sibling": "node_3_1593028373348"
+    },
+    {
+      "type": "standard",
+      "title": "ques31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593028240083",
+      "context": {
+        "java_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593028373348"
+    },
+    {
+      "type": "standard",
+      "title": "spark_quest1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "For Multiclass classification problem which algorithm is not the solution?"
+              },
+              {
+                "text": "1. Naive Bayes"
+              },
+              {
+                "text": "2. Random Forests"
+              },
+              {
+                "text": "3. Logistic Regression"
+              },
+              {
+                "text": "4. Decision Trees"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593113184492",
+      "dialog_node": "node_9_1593154487815"
+    },
+    {
+      "type": "standard",
+      "title": "ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Q3. Props are __________ into other components"
+              },
+              {
+                "text": "1. Injected"
+              },
+              {
+                "text": "2. Methods"
+              },
+              {
+                "text": "3.Both"
+              },
+              {
+                "text": "4.None"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593230479310",
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_7_1593230693443",
+      "previous_sibling": "node_3_1593230689945"
+    },
+    {
+      "type": "standard",
+      "title": "ques31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. How can you access the state of a component from inside of a member function?"
+              },
+              {
+                "text": "1. this.getState()"
+              },
+              {
+                "text": "2. this.prototype.stateValue"
+              },
+              {
+                "text": "3. this.state"
+              },
+              {
+                "text": "4.this.values"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593230479310",
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_3_1593230689945"
+    },
+    {
+      "type": "standard",
+      "title": "r_quest1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "R is an interpreted language so it can access through________?"
+              },
+              {
+                "text": "1. Disk operating system"
+              },
+              {
+                "text": "2. User interface operating system"
+              },
+              {
+                "text": "3. Operating system"
+              },
+              {
+                "text": "4. Command-line interpreter"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593113157011",
+      "dialog_node": "node_3_1593113364168"
+    },
+    {
+      "type": "standard",
+      "title": "spark_quest34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is true for Spark R?"
+              },
+              {
+                "text": "1. It allows data scientists to analyze large datasets and interactively run jobs"
+              },
+              {
+                "text": "2. It is the kernel of Spark"
+              },
+              {
+                "text": "3. It is the scalable machine learning library which delivers efficiencies"
+              },
+              {
+                "text": "4. It enables users to run SQL / HQL queries on the top of Spark."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593154901294",
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_6_1593154966975",
+      "previous_sibling": "node_10_1593154956955"
+    },
+    {
+      "type": "standard",
+      "title": "spark_quest33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is true for Spark MLlib?"
+              },
+              {
+                "text": "1. Provides an execution platform for all the Spark applications"
+              },
+              {
+                "text": "2. It is the scalable machine learning library which delivers efficiencies"
+              },
+              {
+                "text": "3. enables powerful interactive and data analytics application across live streaming data"
+              },
+              {
+                "text": "4. All of the above"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1593154901294",
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_10_1593154956955"
+    },
+    {
+      "type": "standard",
+      "title": "score34w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1593008712323",
+      "context": {
+        "html_score": 0
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_4_1593009469481",
+      "previous_sibling": "node_7_1593009441279"
+    },
+    {
+      "type": "standard",
+      "title": "score34c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593008712323",
+      "context": {
+        "html_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_7_1593009441279"
+    },
+    {
+      "type": "standard",
+      "title": "r_quest22",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which function is used to create the vector with more than one element?"
+              },
+              {
+                "text": "1. library()"
+              },
+              {
+                "text": "2. plot()"
+              },
+              {
+                "text": "3. c()"
+              },
+              {
+                "text": "4. par()"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593113364168",
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_1_1593113387457",
+      "previous_sibling": "node_6_1593113376049"
+    },
+    {
+      "type": "standard",
+      "title": "r_quest21",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is a primary tool for debugging R programming language?"
+              },
+              {
+                "text": "1. debug()"
+              },
+              {
+                "text": "2. trace()"
+              },
+              {
+                "text": "3. browser()"
+              },
+              {
+                "text": "4. None of the above"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1593113364168",
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_6_1593113376049"
+    },
+    {
+      "type": "standard",
+      "title": "ques31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. The \\u0021 article referred to as a"
+              },
+              {
+                "text": "1. Unicode escape sequence"
+              },
+              {
+                "text": "2. Octal escape\n"
+              },
+              {
+                "text": "3. Hexadecimal"
+              },
+              {
+                "text": "4. Line feed"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593014510945",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_3_1593028240083",
+      "previous_sibling": "node_8_1593027466336"
+    },
+    {
+      "type": "standard",
+      "title": "ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Which of the following is not a Java features?\n"
+              },
+              {
+                "text": "1. Use of pointers"
+              },
+              {
+                "text": "2. Dynamic\n"
+              },
+              {
+                "text": "3. Architecture Neutral"
+              },
+              {
+                "text": "4. Object-oriented"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1593014510945",
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_8_1593027466336"
+    },
+    {
+      "type": "standard",
+      "title": "score33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593008645931",
+      "context": {
+        "html_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_5_1593009416782",
+      "previous_sibling": "node_3_1593009383288"
+    },
+    {
+      "type": "standard",
+      "title": "score33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1593008645931",
+      "context": {
+        "html_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_3_1593009383288"
+    },
+    {
+      "type": "standard",
+      "title": "score 31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593008417339",
+      "context": {
+        "html_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_4_1593009271191",
+      "previous_sibling": "node_9_1593009193913"
+    },
+    {
+      "type": "standard",
+      "title": "score31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $html_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593008417339",
+      "context": {
+        "html_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_9_1593009193913"
+    },
+    {
+      "type": "standard",
+      "title": "React_js que1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q1. What is React_js"
+              },
+              {
+                "text": "1.Server-side framework"
+              },
+              {
+                "text": "2.User-interface framework"
+              },
+              {
+                "text": "3. Both"
+              },
+              {
+                "text": "4.None"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1593230295925",
+      "dialog_node": "node_1_1593230354820"
+    },
+    {
+      "type": "standard",
+      "title": "spark_quest32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is true for RDD?"
+              },
+              {
+                "text": "1. We can operate Spark RDDs in parallel with a low-level API"
+              },
+              {
+                "text": "2. RDDs are similar to the table in a relational database"
+              },
+              {
+                "text": "3. It allows processing of a large amount of structured data"
+              },
+              {
+                "text": "4. It has built-in optimization engine"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593154888399",
+      "conditions": "@sys-number != 1",
+      "dialog_node": "node_1_1593154945943",
+      "previous_sibling": "node_5_1593154930660"
+    },
+    {
+      "type": "standard",
+      "title": "spark_quest31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is true for Spark SQL?"
+              },
+              {
+                "text": "1. It is the kernel of Spark"
+              },
+              {
+                "text": "2. Provides an execution platform for all the Spark applications"
+              },
+              {
+                "text": "3. It enables users to run SQL / HQL queries on the top of Spark."
+              },
+              {
+                "text": "4. Enables powerful interactive and data analytics application across live streaming data"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1593154888399",
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_5_1593154930660"
+    },
+    {
+      "type": "standard",
+      "title": "ml32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593155240503",
+      "context": {
+        "ml_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 2",
+      "dialog_node": "node_4_1593159116341",
+      "previous_sibling": "node_4_1593159106678"
+    },
+    {
+      "type": "standard",
+      "title": "ml32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593155240503",
+      "context": {
+        "ml_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_4_1593159106678"
+    },
+    {
+      "type": "standard",
+      "title": "rscore31w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593113397391",
+      "context": {
+        "r_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_9_1593113500639",
+      "previous_sibling": "node_4_1593113476589"
+    },
+    {
+      "type": "standard",
+      "title": "rscore31c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $r_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593113397391",
+      "context": {
+        "r_score": 3
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_4_1593113476589"
+    },
+    {
+      "type": "standard",
+      "title": "ml33w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593159129917",
+      "context": {
+        "ml_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_4_1593159159288",
+      "previous_sibling": "node_4_1593159151415"
+    },
+    {
+      "type": "standard",
+      "title": "ml33c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $ml_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593159129917",
+      "context": {
+        "ml_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1593026459713"
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_4_1593159151415"
+    },
+    {
+      "type": "standard",
+      "title": "Javascript ques 1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is not JavaScript Data Types?"
+              },
+              {
+                "text": "1.Undefined"
+              },
+              {
+                "text": "2.Number"
+              },
+              {
+                "text": " 3.Boolean"
+              },
+              {
+                "text": "4.Float"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593188366753",
+      "dialog_node": "node_2_1593188432034"
+    },
+    {
+      "type": "standard",
+      "title": "r_quest34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following code will print NULL?"
+              },
+              {
+                "text": "1. > args(paste)"
+              },
+              {
+                "text": "2. > arg(paste)"
+              },
+              {
+                "text": "3. > args(pastebin)"
+              },
+              {
+                "text": "4. > arg(bin)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593113387457",
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_9_1593113442339",
+      "previous_sibling": "node_5_1593113428754"
+    },
+    {
+      "type": "standard",
+      "title": "r_quest33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can check to see whether an R object is NULL with the _________ function."
+              },
+              {
+                "text": "1. is.null()"
+              },
+              {
+                "text": "2. is.nullobj()"
+              },
+              {
+                "text": "3. null()"
+              },
+              {
+                "text": "4. as.nullobj()"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1593113387457",
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_5_1593113428754"
+    },
+    {
+      "type": "standard",
+      "title": "html_quest34",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. Which of the following is the attribute that is used to add a name/value pair to a microdata item?"
+              },
+              {
+                "text": "1.itemid"
+              },
+              {
+                "text": "2. itemscope"
+              },
+              {
+                "text": "3. itemprop"
+              },
+              {
+                "text": "4. itemref"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593008322529",
+      "context": {
+        "score_html": 0
+      },
+      "conditions": "@sys-number != 4",
+      "dialog_node": "node_10_1593008712323",
+      "previous_sibling": "node_1_1593008645931"
+    },
+    {
+      "type": "standard",
+      "title": "html_quest33",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which of the following is the attribute that specifies additional horizontal space, in pixels, to be reserved on either side of an embedded item like an iframe, applet, image, and so on?"
+              },
+              {
+                "text": "1. datasrc"
+              },
+              {
+                "text": "2. hidefocus"
+              },
+              {
+                "text": "3. hspace"
+              },
+              {
+                "text": "4. height"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593008322529",
+      "context": {
+        "score_html": 1
+      },
+      "conditions": "@sys-number:4",
+      "dialog_node": "node_1_1593008645931"
+    },
+    {
+      "type": "standard",
+      "title": "ques32",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. What is a react.js in MVC?"
+              },
+              {
+                "text": "1.Controller"
+              },
+              {
+                "text": "2. Middleware"
+              },
+              {
+                "text": "3.Model"
+              },
+              {
+                "text": "4.Router"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593230482472",
+      "conditions": "@sys-number != 3",
+      "dialog_node": "node_1_1593231272407",
+      "previous_sibling": "node_9_1593231269168"
+    },
+    {
+      "type": "standard",
+      "title": "ques31",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Q3. What does the “webpack” command do?"
+              },
+              {
+                "text": "1.Transpiles all the Javascript down into one file"
+              },
+              {
+                "text": "2.Runs react local development server"
+              },
+              {
+                "text": "3.Both 1 and 2"
+              },
+              {
+                "text": "4. None"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593230482472",
+      "conditions": "@sys-number:3",
+      "dialog_node": "node_9_1593231269168"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Enter name to continue"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1593078148237",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1593078148258",
+      "previous_sibling": "handler_8_1593078148258"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1593078148237",
+      "context": {
+        "name": "@name"
+      },
+      "conditions": "@name",
+      "event_name": "input",
+      "dialog_node": "handler_8_1593078148258"
+    },
+    {
+      "type": "standard",
+      "title": "ques32w",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593028018709",
+      "context": {
+        "java_score": 1
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:2",
+      "dialog_node": "node_5_1593028122921",
+      "previous_sibling": "node_3_1593028116590"
+    },
+    {
+      "type": "standard",
+      "title": "ques32c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Score = $java_score/3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1593028018709",
+      "context": {
+        "java_score": 2
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1593117636334"
+      },
+      "conditions": "@sys-number:1",
+      "dialog_node": "node_3_1593028116590"
+    },
+    {
+      "type": "standard",
+      "title": "Web Dev",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please select any one programming language from the given list which you think best suits on you for this designation."
+              },
+              {
+                "text": "[HTML, Node.js, Angular, Java, Javascript, PHP, React.js, ASP.NET, Wordpress]"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "context": {
+        "webdev_flag": 1
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#webdev || @webdev",
+      "dialog_node": "node_5_1592832720417",
+      "previous_sibling": "node_10_1593014296780"
+    },
+    {
+      "type": "frame",
+      "title": "Begin",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "So $name, let us begin!"
+              },
+              {
+                "text": "Please enter the designation for which you are applying."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "context": {
+        "r_score": 0,
+        "js_score": 0,
+        "ml_score": 0,
+        "ang_score": 0,
+        "php_score": 0,
+        "html_score": 0,
+        "java_score": 0,
+        "react_score": 0,
+        "spark_score": 0,
+        "webdev_flag": 0,
+        "datasci_flag": 0,
+        "django_score": 0,
+        "python_score": 0
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#name || @name",
+      "dialog_node": "node_9_1593077970537",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Data Scientist",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please select any one programming language from the given list which you think best suits on you for this designation."
+              },
+              {
+                "text": "[Python, R, Django, Spark, Machine Learning]"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "context": {
+        "datasci_flag": 1
+      },
+      "conditions": "#datasci || @datasci",
+      "dialog_node": "node_10_1593014296780",
+      "previous_sibling": "node_9_1593077970537"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_5_1592832720417",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. Welcome to the Interview Round."
+              },
+              {
+                "text": "Please enter your full name."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#welcome || welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Recruit",
+  "language": "en",
+  "description": ""
+}

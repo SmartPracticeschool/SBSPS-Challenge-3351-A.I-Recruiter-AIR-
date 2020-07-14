@@ -1,0 +1,13 @@
+//Search_Index:for_status
+{
+  "_id": "_design/sort_candidates",
+  "_rev": "8-089cc7d7e4f031e58e3570bbd4ee10ed",
+  "views": {},
+  "language": "javascript",
+  "indexes": {
+    "status": {
+      "analyzer": "standard",
+      "index": "function (doc) {\r\n   index(\"id\", doc._id, {\"store\": true});\r\n   index(\"status\", doc.Status, {\"store\": true});\r\n   if(doc.Total_Score){\r\n   index(\"score\", doc.Total_Score, {\"store\": true});\r\n   }\r\n}"
+    }
+  }
+}
