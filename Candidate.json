@@ -1,0 +1,2436 @@
+[
+    {
+        "id": "96d961f0.c58e6",
+        "type": "tab",
+        "label": "User",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "570ce68d.0e77f8",
+        "type": "watson-conversation-v1",
+        "z": "96d961f0.c58e6",
+        "name": "AIR",
+        "workspaceid": "a34b0b90-d908-451a-9d7b-216f7d7a0725",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": true,
+        "service-endpoint": "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/332bc032-b4e0-4514-a3c9-9c2049a967fe",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 630,
+        "y": 880,
+        "wires": [
+            [
+                "2351069.9fcc3fa",
+                "c9996043.d286a"
+            ]
+        ]
+    },
+    {
+        "id": "2351069.9fcc3fa",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "bot_output",
+        "func": "//if(msg.payload.output.generic[1].response_type==\"image\"){\n  //  msg.url = msg.payload.output.generic[1].source\n    //msg.payload = msg.payload.output.generic[0].title\n//}\n//else{\n  //  msg.url=\"https://wallpaperplay.com/walls/full/b/d/1/58065.jpg\"\n//}\n\nvar m=\"\";\nfor(var i=0;i<msg.payload.output.text.length;++i){\nm = m + \"<br>\"+msg.payload.output.text[i];\n}\nmsg.payload=m;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 870,
+        "y": 940,
+        "wires": [
+            [
+                "74de7fcc.b9704"
+            ]
+        ]
+    },
+    {
+        "id": "c608a94a.e4c328",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "get_image",
+        "func": "//if(msg.payload.output.generic[1].response_type==\"image\"){\n  //  msg.url = msg.payload.output.generic[1].source;\n    //msg.payload = msg.payload.output.generic[0].title\n    //msg.payload = {\"group\": {\"show\": [\"A.I._Recruiter_UI\"], \"focus\": true}};\n  \n//}\n//else{\n    //msg.payload = {\"group\": {\"hide\": [\"A.I._Recruiter_UI\"], \"focus\": true}};\n//}\n\nif(msg.payload.output.generic[0].response_type==\"image\"){\n    msg.url = msg.payload.output.generic[0].source\n    //msg.payload = msg.payload.output.generic[0].title\n}\nelse{\n    msg.url=\"https://t3.ftcdn.net/jpg/02/20/14/38/240_F_220143804_fc4xRygvJ8bn8JPQumtHJieDN4ORNyjs.jpg\"\n    msg.payload = msg.payload.output.text[0];\n}\n\n\nreturn msg;\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dbb3283f.423338",
+        "type": "change",
+        "z": "96d961f0.c58e6",
+        "name": "set payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "null",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1140,
+        "wires": [
+            [
+                "f78c81fc.900e",
+                "74de7fcc.b9704",
+                "ffcacb79.1e1218"
+            ]
+        ]
+    },
+    {
+        "id": "ec0edbe3.7e9a18",
+        "type": "change",
+        "z": "96d961f0.c58e6",
+        "name": "clear_input",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.name",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.email",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.num",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.gen",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.dob",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.dsg",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.deg",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.yop",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.linkedin",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "ddda998.e4c2968"
+            ]
+        ]
+    },
+    {
+        "id": "2919a6b.565305a",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "reset_bot",
+        "func": "var m = \"welcome\";\nmsg.payload = m;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 1060,
+        "wires": [
+            [
+                "570ce68d.0e77f8"
+            ]
+        ]
+    },
+    {
+        "id": "fd825226.3d477",
+        "type": "cloudant in",
+        "z": "96d961f0.c58e6",
+        "name": "Retrive docouments",
+        "cloudant": "87e74db3.e9e75",
+        "database": "candidate_details",
+        "service": "node-red-tuxso-cloudant-1593285710222-73601",
+        "search": "_all",
+        "design": "",
+        "index": "",
+        "x": 440,
+        "y": 4760,
+        "wires": [
+            [
+                "d05161e7.018d1"
+            ]
+        ]
+    },
+    {
+        "id": "22c3d5bc.7e00aa",
+        "type": "http in",
+        "z": "96d961f0.c58e6",
+        "name": "Insert data",
+        "url": "/putdata",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 147.99998474121094,
+        "y": 4655.849990844727,
+        "wires": [
+            [
+                "56564604.9e6bf8",
+                "aefbb252.4ab15"
+            ]
+        ]
+    },
+    {
+        "id": "756fd954.e6f2e8",
+        "type": "http in",
+        "z": "96d961f0.c58e6",
+        "name": "Retrieve data",
+        "url": "/getdata",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 153.99998474121094,
+        "y": 4759.8499755859375,
+        "wires": [
+            [
+                "fd825226.3d477"
+            ]
+        ]
+    },
+    {
+        "id": "56564604.9e6bf8",
+        "type": "http response",
+        "z": "96d961f0.c58e6",
+        "name": "Data inserted",
+        "x": 706.0000305175781,
+        "y": 4657.433319091797,
+        "wires": []
+    },
+    {
+        "id": "d05161e7.018d1",
+        "type": "http response",
+        "z": "96d961f0.c58e6",
+        "name": "List of documents",
+        "statusCode": "",
+        "headers": {},
+        "x": 714.0000305175781,
+        "y": 4758.433319091797,
+        "wires": []
+    },
+    {
+        "id": "aefbb252.4ab15",
+        "type": "cloudant out",
+        "z": "96d961f0.c58e6",
+        "name": "Insert test documents",
+        "cloudant": "87e74db3.e9e75",
+        "database": "candidate_details",
+        "service": "node-red-tuxso-cloudant-1593285710222-73601",
+        "payonly": false,
+        "operation": "insert",
+        "x": 441.00006103515625,
+        "y": 4703.799987792969,
+        "wires": []
+    },
+    {
+        "id": "def2d140.d1884",
+        "type": "comment",
+        "z": "96d961f0.c58e6",
+        "name": "Using CloudantDB in Node-RED",
+        "info": "This is a simple flow that tests storing and retrieving documents from a \nCloudant database. It is borrowed from this tutorial by Dave Krier:\nhttps://www.youtube.com/watch?v=FXm2Bk-tCIc\n\nIt uses \"node-red-node-cf-cloudant\" Cloudant nodes which are documented\nhere:\nhttp://flows.nodered.org/node/node-red-node-cf-cloudant\n\nYou can sign up for a free Cloudant database here:\nhttps://cloudant.com/\n\nAfter signing up you should create a database then click on the\n\"Permissions\" tab to create a user. Click the \"Generate API Key\" button\nand record the key and password values.\n\nConfigure the Cloudant nodes by entering the path to the Cloudant database \nin the Host field. The key and password should be entered in the \nUsername and Password fields. Enter the database name in the Database field.\n\nDeploy your Node-red flow and open another browser tab to execute\ncreate, read and bulk delete operations:\n\n(1) To insert documents use commands of this type:\nhttp://localhost:1880/putdata?name=graham&age=29\n\n(2) To retrieve documents:\nhttp://localhost:1880/getdata\n\n(3) To delete ALL documents:\nhttp://localhost:1880/deleteall\n\nTODO - find a more efficient way to delete all the documents.\n",
+        "x": 215.99998474121094,
+        "y": 4597.499984741211,
+        "wires": []
+    },
+    {
+        "id": "3b256297.1d4dfe",
+        "type": "http in",
+        "z": "96d961f0.c58e6",
+        "name": "Delete all documents",
+        "url": "/deleteall",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 179.54998779296875,
+        "y": 4838.549987792969,
+        "wires": [
+            [
+                "33c3a5ac.f5058a"
+            ]
+        ]
+    },
+    {
+        "id": "33c3a5ac.f5058a",
+        "type": "cloudant in",
+        "z": "96d961f0.c58e6",
+        "name": "Retrieve documents",
+        "cloudant": "87e74db3.e9e75",
+        "database": "candidate_details",
+        "service": "node-red-tuxso-cloudant-1593285710222-73601",
+        "search": "all",
+        "design": "",
+        "index": "",
+        "x": 434.8833312988281,
+        "y": 4837.994384765625,
+        "wires": [
+            [
+                "d91e7ba4.185348",
+                "9993a4dc.f57e78"
+            ]
+        ]
+    },
+    {
+        "id": "d91e7ba4.185348",
+        "type": "http response",
+        "z": "96d961f0.c58e6",
+        "name": "List of documents to delete",
+        "x": 739.4610900878906,
+        "y": 4837.572204589844,
+        "wires": []
+    },
+    {
+        "id": "2eca2d89.004382",
+        "type": "cloudant out",
+        "z": "96d961f0.c58e6",
+        "name": "Remove all documents ",
+        "cloudant": "87e74db3.e9e75",
+        "database": "candidate_details",
+        "service": "node-red-tuxso-cloudant-1593285710222-73601",
+        "payonly": false,
+        "operation": "delete",
+        "x": 741.0000305175781,
+        "y": 4964.5333251953125,
+        "wires": []
+    },
+    {
+        "id": "9993a4dc.f57e78",
+        "type": "split",
+        "z": "96d961f0.c58e6",
+        "name": "split out individual documents",
+        "splt": "\\n",
+        "x": 434.99993896484375,
+        "y": 4906.883331298828,
+        "wires": [
+            [
+                "2ff1fa06.0cba86"
+            ]
+        ]
+    },
+    {
+        "id": "b4fc1e07.969d9",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "id and rev to delete",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 740.0000305175781,
+        "y": 4903.233337402344,
+        "wires": []
+    },
+    {
+        "id": "2ff1fa06.0cba86",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "Extract id and rev",
+        "func": "\nvar document = {_id: msg.payload._id, _rev: msg.payload._rev};\n\nmsg.payload = document;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 413,
+        "y": 4968.449981689453,
+        "wires": [
+            [
+                "2eca2d89.004382",
+                "b4fc1e07.969d9"
+            ]
+        ]
+    },
+    {
+        "id": "bd4b9167.2e5b6",
+        "type": "cloudant out",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "4e86110.c42b5f",
+        "database": "candidate_details",
+        "service": "air-cloudant-1594112282541-41063",
+        "payonly": true,
+        "operation": "insert",
+        "x": 570,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7340a765.94fc28",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "msg.payload = {\n    _id:msg.payload.email,\n    Name:msg.payload.name,\n    Emailid:msg.payload.email,\n    Contactnumber:msg.payload.num,\n    Gender:msg.payload.gen,\n    Dateofbirth:msg.payload.dob,\n    Linkedin:msg.payload.linkedin,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "bd4b9167.2e5b6"
+            ]
+        ]
+    },
+    {
+        "id": "ee72ce41.04cbe",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "// var lastinput = context.get(\"lastinput\") || \"\";\n\n// if(lastinput !== null){\n// if(msg.topic === \"userinput\"){\n//     lastinput = msg.payload;\n//     context.set(\"lastinput\",lastinput);\n// }\n// if(msg.topic === \"submit\"){\n//     msg.payload = lastinput;\n// }\n// }\n\n\nvar data = context.get(\"data\") || 0;\n\nif(msg.topic === \"userinput\"){\n    data = msg.payload;\n    context.set(\"data\",data);\n    //if no output is needed while writting, stop the flow right here\n    //return\n}\nif(msg.topic === \"submit\"){\n    msg.payload = data;\n}\n\n\nif(msg.payload !== \"\"){\nreturn msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 900,
+        "wires": [
+            [
+                "570ce68d.0e77f8",
+                "6168ed63.a4f384",
+                "f78c81fc.900e"
+            ]
+        ]
+    },
+    {
+        "id": "ec5185e.00ec378",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "selected_stored",
+        "func": "var totalscore = global.get(\"totalscore\");\nvar id = global.get(\"_id\");\nvar rev = global.get(\"_rev\");\nvar dsg1 = global.get(\"datasci_flag\");\nvar dgs2 = global.get(\"webdev_flag\");\nvar dsg =\"\";\nif(dsg1 === 1){\n    dsg = \"Data Scientist\";\n}\nif(dsg2 === 1){\n    dsg = \"Web Developer\";\n}\nglobal.set(\"dsg\",dsg);\n\nif (totalscore >= 6){\n    \n    msg.payload = {\n    _id: id,\n    _rev: rev,\n    Name: msg.payload.Name,\n    Email: msg.payload.Emailid,\n    Contactnumber: msg.payload.Contactnumber,\n    Gender: msg.payload.Gender,\n    Dateofbirth: msg.payload.Dateofbirth,\n    Designation: dsg,\n    Linkedin: msg.payload.Linkedin,\n    Total_Score: totalscore,\n    Status: \"Selected\",\n    }\n}\n    \nif (totalscore < 6){\n    \n    msg.payload = {\n    _id: id,\n    _rev: rev,\n    Name: msg.payload.Name,\n    Email: msg.payload.Emailid,\n    Contactnumber: msg.payload.Contactnumber,\n    Gender: msg.payload.Gender,\n    Dateofbirth: msg.payload.Dateofbirth,\n    Designation: dsg,\n    Linkedin: msg.payload.Linkedin,\n    Total_Score: totalscore,\n    Status: \"Shortlisted\",\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1200,
+        "y": 580,
+        "wires": [
+            [
+                "ffae24bc.fd3d48"
+            ]
+        ]
+    },
+    {
+        "id": "812b8484.3c9878",
+        "type": "cloudant in",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "87e74db3.e9e75",
+        "database": "candidate_details",
+        "service": "air-cloudant-1594112282541-41063",
+        "search": "_id_",
+        "design": "",
+        "index": "",
+        "x": 790,
+        "y": 580,
+        "wires": [
+            [
+                "41d88b8d.f9d6b4",
+                "5c2785c5.46c42c"
+            ]
+        ]
+    },
+    {
+        "id": "25edd354.e022dc",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "total_score",
+        "func": "var datasci_flag = global.get(\"datasci_flag\");\nvar webdev_flag = global.get(\"webdev_flag\");\nvar total_score = 0;\n\nif(datasci_flag === 1){\n    total_score = msg.payload.context.python_score +\n                        msg.payload.context.r_score + \n                        msg.payload.context.django_score +\n                        msg.payload.context.spark_score +\n                        msg.payload.context.ml_score;\n}\nif(webdev_flag === 1){\n    total_score = msg.payload.context.js_score +\n                        msg.payload.context.html_score + \n                        msg.payload.context.react_score +\n                        msg.payload.context.ang_score +\n                        msg.payload.context.php_score +\n                        msg.payload.context.java_score;\n}\n\nglobal.set(\"totalscore\",total_score);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 740,
+        "wires": [
+            [
+                "3d21d0f4.24811"
+            ]
+        ]
+    },
+    {
+        "id": "d93b3afc.214348",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "global.set",
+        "func": "global.set(\"email\",msg.payload.email);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 600,
+        "wires": [
+            [
+                "3d21d0f4.24811"
+            ]
+        ]
+    },
+    {
+        "id": "78eb3b09.026eb4",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "global.get",
+        "func": "var email = global.get(\"email\");\nmsg.payload = {\n    \"_id\": email,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 580,
+        "wires": [
+            [
+                "812b8484.3c9878"
+            ]
+        ]
+    },
+    {
+        "id": "ffae24bc.fd3d48",
+        "type": "cloudant out",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "4e86110.c42b5f",
+        "database": "candidate_details",
+        "service": "air-cloudant-1594112282541-41063",
+        "payonly": true,
+        "operation": "insert",
+        "x": 1430,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "41d88b8d.f9d6b4",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 810,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5c2785c5.46c42c",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "global.set",
+        "func": "global.set(\"_id\",msg.payload._id);\nglobal.set(\"_rev\",msg.payload._rev);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            [
+                "ec5185e.00ec378"
+            ]
+        ]
+    },
+    {
+        "id": "e6afa28.1d8a06",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "selected",
+        "func": "var totalscore = global.get(\"totalscore\");\n\nif(totalscore >= 6){\nmsg.payload = {\"tab\":\"Assessment Test\"};\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1120,
+        "y": 640,
+        "wires": [
+            [
+                "bebe6fd2.ec705"
+            ]
+        ]
+    },
+    {
+        "id": "e853b774.556fa8",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "insights",
+        "targetType": "msg",
+        "x": 1110,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "82570ec9.5a0a6",
+        "type": "watson-personality-insights-v3",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "inputlang": "en",
+        "outputlang": "en",
+        "rawscores": true,
+        "consumption": false,
+        "service-endpoint": "https://api.eu-gb.personality-insights.watson.cloud.ibm.com/instances/8234c5b2-f6e5-401a-a3ea-92cbee516d1f",
+        "x": 870,
+        "y": 1280,
+        "wires": [
+            [
+                "e853b774.556fa8",
+                "114582e3.9fab4d"
+            ]
+        ]
+    },
+    {
+        "id": "8837dbc4.de76d8",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "msg.payload = msg.payload.ans1 + msg.payload.ans2 + msg.payload.ans3;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 1280,
+        "wires": [
+            [
+                "82570ec9.5a0a6"
+            ]
+        ]
+    },
+    {
+        "id": "91254b36.fa1108",
+        "type": "cloudant out",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "",
+        "database": "personality-insights",
+        "service": "air-cloudant-1594112282541-41063",
+        "payonly": true,
+        "operation": "insert",
+        "x": 1270,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "41d3aeb2.40922",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "display_score",
+        "func": "var totalscore = global.get(\"totalscore\");\n\nif(totalscore >= 6){\n    msg.payload = \"Great! Your total score was \"+totalscore+\".\"; \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1140,
+        "y": 700,
+        "wires": [
+            [
+                "379a7b6a.59ef54"
+            ]
+        ]
+    },
+    {
+        "id": "a984aaf3.3ac988",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "not selected",
+        "func": "var totalscore = global.get(\"totalscore\");\n\nif(totalscore < 6){\n    msg.payload = \"Sorry you have not been selected for the next round.\";\n}\nelse{\n    msg.payload = \"\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1130,
+        "y": 760,
+        "wires": [
+            [
+                "ffcacb79.1e1218",
+                "95f6a684.a82c78"
+            ]
+        ]
+    },
+    {
+        "id": "c9996043.d286a",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "flags",
+        "func": "global.set(\"datasci_flag\",msg.payload.context.datasci_flag);\nglobal.set(\"webdev_flag\",msg.payload.context.webdev_flag);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 630,
+        "y": 820,
+        "wires": [
+            [
+                "25edd354.e022dc"
+            ]
+        ]
+    },
+    {
+        "id": "114582e3.9fab4d",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "var email = global.get(\"email\");\nvar personality = msg.insights;\n\nmsg.payload = {\n    _id: email,\n    insights: personality,\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1080,
+        "y": 1220,
+        "wires": [
+            [
+                "91254b36.fa1108"
+            ]
+        ]
+    },
+    {
+        "id": "a742cce2.df75a",
+        "type": "http in",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "url": "/ui/simple",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "ab82ea2d.870018"
+            ]
+        ]
+    },
+    {
+        "id": "3d6ceee9.adee62",
+        "type": "http response",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "44b0d61a.e186e8",
+        "type": "watson-discovery-v1-document-loader",
+        "z": "96d961f0.c58e6",
+        "name": "pdf reader",
+        "environmentId": "20a43565-d04a-4263-b931-d8bf8a17fb8b",
+        "collectionId": "385aa969-3964-45b7-b890-6119fbe3e2a8",
+        "filename": "",
+        "service-endpoint": "https://gateway.watsonplatform.net/discovery/api",
+        "x": 630,
+        "y": 140,
+        "wires": [
+            [
+                "f578cbb.39fc138",
+                "2ed59e6f.54b302"
+            ]
+        ]
+    },
+    {
+        "id": "16c3da4e.616366",
+        "type": "http in",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "url": "/ui/upload",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "44b2db4a.b6b654",
+                "aed96262.c8fdd"
+            ]
+        ]
+    },
+    {
+        "id": "f578cbb.39fc138",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2ed59e6f.54b302",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "var text = \"\";\n\nfor(var i=0;i<msg.payload.pages.length;i++){\n    text = text + msg.payload.pages[i].text;\n}\n\nmsg.payload = text;\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1040,
+        "y": 200,
+        "wires": [
+            [
+                "c73c9bcd.b5f708"
+            ]
+        ]
+    },
+    {
+        "id": "c73c9bcd.b5f708",
+        "type": "switch",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "bachelor",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "B.E.",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "BE",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "B.E",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "Master",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "B Tech",
+                "vt": "str",
+                "case": true
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 1210,
+        "y": 220,
+        "wires": [
+            [
+                "27d0442d.07f1bc",
+                "bbcbc556.ebf218"
+            ],
+            [
+                "27d0442d.07f1bc",
+                "bbcbc556.ebf218"
+            ],
+            [
+                "27d0442d.07f1bc",
+                "bbcbc556.ebf218"
+            ],
+            [
+                "27d0442d.07f1bc",
+                "bbcbc556.ebf218"
+            ],
+            [
+                "27d0442d.07f1bc",
+                "bbcbc556.ebf218"
+            ],
+            [
+                "27d0442d.07f1bc",
+                "bbcbc556.ebf218"
+            ]
+        ]
+    },
+    {
+        "id": "f6fb263e.2db388",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "// var email = global.get(\"email\",email);\n\n// msg.payload = {\n//     _id: email,\n//     Status: \"Shortlisted\",\n// }\n\n// return msg;\nvar email = global.get(\"email\");\n\nmsg.payload = {\n    \"_id\": email,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1720,
+        "y": 160,
+        "wires": [
+            [
+                "d9f46969.c11bd8",
+                "c2f0797.1f23688"
+            ]
+        ]
+    },
+    {
+        "id": "27d0442d.07f1bc",
+        "type": "switch",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "data scientist",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "data engineer",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "machine learning",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "data analyst",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "data science",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "python",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "data analysis",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "django",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "spark",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "flask",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "machine engineer",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "artificial intelligence",
+                "vt": "str",
+                "case": true
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 12,
+        "x": 1430,
+        "y": 120,
+        "wires": [
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ]
+        ]
+    },
+    {
+        "id": "bbcbc556.ebf218",
+        "type": "switch",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "web designer",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "web developer",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "ui/ux designer",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "web development",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "full stack ",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "full-stack",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "html",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "css",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "java",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "javascript",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "angular",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "react",
+                "vt": "str",
+                "case": true
+            },
+            {
+                "t": "regex",
+                "v": "node js",
+                "vt": "str",
+                "case": true
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 13,
+        "x": 1430,
+        "y": 360,
+        "wires": [
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ],
+            [
+                "f6fb263e.2db388"
+            ]
+        ]
+    },
+    {
+        "id": "d6f212b5.0c9a7",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "msg.payload = \"Your resume has been uploaded.\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 40,
+        "wires": [
+            [
+                "7221ac75.eed934"
+            ]
+        ]
+    },
+    {
+        "id": "d9f46969.c11bd8",
+        "type": "cloudant in",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "4e86110.c42b5f",
+        "database": "candidate_details",
+        "service": "air-cloudant-1594112282541-41063",
+        "search": "_id_",
+        "design": "",
+        "index": "",
+        "x": 1930,
+        "y": 160,
+        "wires": [
+            [
+                "9b70e529.51c198"
+            ]
+        ]
+    },
+    {
+        "id": "9b70e529.51c198",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "global.set",
+        "func": "global.set(\"_id\",msg.payload._id);\nglobal.set(\"_rev\",msg.payload._rev);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2120,
+        "y": 160,
+        "wires": [
+            [
+                "4b7d24b9.48ca3c"
+            ]
+        ]
+    },
+    {
+        "id": "4b7d24b9.48ca3c",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "Shortlisted ",
+        "func": "var id = global.get(\"_id\");\nvar rev = global.get(\"_rev\");\n\nmsg.payload = {\n    _id: id,\n    _rev: rev,\n    Name:msg.payload.Name,\n    Emailid:msg.payload.Emailid,\n    Contactnumber:msg.payload.Contactnumber,\n    Gender:msg.payload.Gender,\n    Dateofbirth:msg.payload.Dateofbirth,\n    Linkedin:msg.payload.Linkedin,\n    Status: \"Shortlisted\",\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 2290,
+        "y": 160,
+        "wires": [
+            [
+                "5ed5e3a7.1d838c"
+            ]
+        ]
+    },
+    {
+        "id": "c2f0797.1f23688",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "msg.payload = \"Great! You have been shortlisted for Round II.\"+\"<br>\"+\n                \"Click 'Next' for technical round.\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1860,
+        "y": 40,
+        "wires": [
+            [
+                "d71daa26.c84ef8"
+            ]
+        ]
+    },
+    {
+        "id": "ae160bd2.da0098",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "var email = global.get(\"email\");\nmsg.payload = {\n    \"_id\": email,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1900,
+        "y": 280,
+        "wires": [
+            [
+                "e29ca281.69634"
+            ]
+        ]
+    },
+    {
+        "id": "e29ca281.69634",
+        "type": "cloudant in",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "4e86110.c42b5f",
+        "database": "candidate_details",
+        "service": "air-cloudant-1594112282541-41063",
+        "search": "_id_",
+        "design": "",
+        "index": "",
+        "x": 2110,
+        "y": 280,
+        "wires": [
+            [
+                "251f0f.460f60f2",
+                "659ae452.bb3c0c"
+            ]
+        ]
+    },
+    {
+        "id": "659ae452.bb3c0c",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "var status = msg.payload.Status;\n\nif(status === \"Shortlisted\"){\n    msg.payload = {\"tab\":\"Technical Round\"};\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 2320,
+        "y": 360,
+        "wires": [
+            [
+                "5928a9d9.3604a8",
+                "7db5058a.b58e1c"
+            ]
+        ]
+    },
+    {
+        "id": "251f0f.460f60f2",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "var status = msg.payload.Status;\n\nif(status !== \"Shortlisted\"){\n    msg.payload = \"Sorry, you have not been selected for the Interview Round.\";\n}\nelse{\n    msg.payload = \"\";\n}\n\n// else{\n//     msg.payload = \"Sorry, you have not been selected for the Interview Round.\";\n// }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 2340,
+        "y": 280,
+        "wires": [
+            [
+                "a052f2e8.f25c9",
+                "1f3a9cab.59e223"
+            ]
+        ]
+    },
+    {
+        "id": "fa18c967.669558",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "msg.payload = \"You are done with all the rounds. Further details will be conveyed to you.\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
+        "y": 1360,
+        "wires": [
+            [
+                "171f6b60.b581a5"
+            ]
+        ]
+    },
+    {
+        "id": "8b532d0f.77365",
+        "type": "ui_button",
+        "z": "96d961f0.c58e6",
+        "name": "reset",
+        "group": "f10dcae4.b27918",
+        "order": 7,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "button",
+        "x": 170,
+        "y": 1140,
+        "wires": [
+            [
+                "dbb3283f.423338",
+                "2919a6b.565305a"
+            ]
+        ]
+    },
+    {
+        "id": "d441114a.415a3",
+        "type": "ui_button",
+        "z": "96d961f0.c58e6",
+        "d": true,
+        "name": "",
+        "group": "f10dcae4.b27918",
+        "order": 5,
+        "width": "2",
+        "height": 1,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "submit",
+        "x": 100,
+        "y": 960,
+        "wires": [
+            [
+                "ee72ce41.04cbe"
+            ]
+        ]
+    },
+    {
+        "id": "3d21d0f4.24811",
+        "type": "ui_button",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "group": "f10dcae4.b27918",
+        "order": 6,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "label": "Next",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 650,
+        "y": 660,
+        "wires": [
+            [
+                "78eb3b09.026eb4",
+                "e6afa28.1d8a06",
+                "41d3aeb2.40922",
+                "a984aaf3.3ac988"
+            ]
+        ]
+    },
+    {
+        "id": "47b627a8.500588",
+        "type": "ui_button",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "group": "98e5d511.09be28",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Next",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "thumb_up",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1730,
+        "y": 280,
+        "wires": [
+            [
+                "ae160bd2.da0098"
+            ]
+        ]
+    },
+    {
+        "id": "46c7940f.2379cc",
+        "type": "ui_text_input",
+        "z": "96d961f0.c58e6",
+        "name": "userinput",
+        "label": "",
+        "tooltip": "",
+        "group": "f10dcae4.b27918",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "userinput",
+        "x": 120,
+        "y": 840,
+        "wires": [
+            [
+                "ee72ce41.04cbe",
+                "ce301ea6.36422"
+            ]
+        ]
+    },
+    {
+        "id": "f78c81fc.900e",
+        "type": "ui_text",
+        "z": "96d961f0.c58e6",
+        "group": "f10dcae4.b27918",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Candidate: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 430,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "74de7fcc.b9704",
+        "type": "ui_text",
+        "z": "96d961f0.c58e6",
+        "group": "f10dcae4.b27918",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "name": "",
+        "label": "Bot: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1070,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "379a7b6a.59ef54",
+        "type": "ui_text",
+        "z": "96d961f0.c58e6",
+        "group": "7a08cad.8368334",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1310,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ffcacb79.1e1218",
+        "type": "ui_text",
+        "z": "96d961f0.c58e6",
+        "group": "f10dcae4.b27918",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1390,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "ddda998.e4c2968",
+        "type": "ui_form",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "label": "",
+        "group": "98e5d511.09be28",
+        "order": 3,
+        "width": "6",
+        "height": "8",
+        "options": [
+            {
+                "label": "Enter Your Name",
+                "value": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter Your Email ID",
+                "value": "email",
+                "type": "email",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter Contact Number",
+                "value": "num",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter Your Gender",
+                "value": "gen",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter Your Date Of Birth",
+                "value": "dob",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Linkedin Profile",
+                "value": "linkedin",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": "",
+            "email": "",
+            "num": "",
+            "gen": "",
+            "dob": "",
+            "linkedin": ""
+        },
+        "payload": "",
+        "submit": "Submit Details",
+        "cancel": "Reset",
+        "topic": "",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "7340a765.94fc28",
+                "dbb3283f.423338",
+                "ec0edbe3.7e9a18",
+                "2919a6b.565305a",
+                "d93b3afc.214348"
+            ]
+        ]
+    },
+    {
+        "id": "6c8ad84f.b4f5d8",
+        "type": "ui_form",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "label": "Answer the following questions in minimum 50 words.",
+        "group": "7a08cad.8368334",
+        "order": 4,
+        "width": 6,
+        "height": 5,
+        "options": [
+            {
+                "label": "Q1. Why should we hire you?",
+                "value": "ans1",
+                "type": "multiline",
+                "required": true,
+                "rows": 5
+            },
+            {
+                "label": "",
+                "value": "abc",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Q2. Do you prefer working in a team or on your own? Why?",
+                "value": "ans2",
+                "type": "multiline",
+                "required": true,
+                "rows": 5
+            },
+            {
+                "label": "",
+                "value": "def",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Q3. What is the one thing you would change about yourself? Why?",
+                "value": "ans3",
+                "type": "multiline",
+                "required": true,
+                "rows": 5
+            }
+        ],
+        "formValue": {
+            "ans1": "",
+            "abc": "",
+            "ans2": "",
+            "def": "",
+            "ans3": ""
+        },
+        "payload": "",
+        "submit": "Submit",
+        "cancel": "Reset",
+        "topic": "",
+        "x": 280,
+        "y": 1320,
+        "wires": [
+            [
+                "8837dbc4.de76d8",
+                "fa18c967.669558",
+                "ea85993f.03c9b8",
+                "1ac03a4e.909b86"
+            ]
+        ]
+    },
+    {
+        "id": "bebe6fd2.ec705",
+        "type": "ui_ui_control",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "events": "change",
+        "x": 1320,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5928a9d9.3604a8",
+        "type": "ui_ui_control",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "events": "change",
+        "x": 2500,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab82ea2d.870018",
+        "type": "ui_template",
+        "z": "96d961f0.c58e6",
+        "group": "98e5d511.09be28",
+        "name": "Upload Resume",
+        "order": 4,
+        "width": 6,
+        "height": 2,
+        "format": "<head><link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n<style>\n    #file-upload-button {\n        color: #fff;\n    background-color: #17a2b8;\n    border-color: #17a2b8;\n    }\n    .btn{\n        background-color: #267987;\n        border-radius: 3px;\n    }\n</style>\n</head>\n\n<h5>Upload file here:</h5>\n\n<form action=\"/ui/upload\" method=\"POST\" enctype=\"multipart/form-data\">\n    <input type=\"file\" name=\"myFile\" />\n    <input class=\"btn btn-info\" type=\"submit\" value=\"Upload\">\n</form>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 280,
+        "y": 60,
+        "wires": [
+            [
+                "3d6ceee9.adee62"
+            ]
+        ]
+    },
+    {
+        "id": "497d482a.3df458",
+        "type": "ui_template",
+        "z": "96d961f0.c58e6",
+        "group": "98e5d511.09be28",
+        "name": "Rules",
+        "order": 2,
+        "width": 6,
+        "height": "3",
+        "format": "<style>\n    p{\n        font-size: 18px;\n    }\n</style>\n\n<h2 align=\"center\">Welcome to A.I.R</h2>\n<p>\nPlease note:<br>\n1. Fill the form below and click submit.<br>\n2. Upload your resume in .pdf format.<br>\n3. Click 'Next' button.<br>\n</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 110,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c3ad97e.2dd948",
+        "type": "ui_template",
+        "z": "96d961f0.c58e6",
+        "group": "f10dcae4.b27918",
+        "name": "BG2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    body{\n        background-image: url(\"https://i.ibb.co/ynH1d4V/wp2848515-hd-technology-wallpapers-1080p-20200707213303521.jpg\");\n        background-size: cover;\n         background-position: center;\n         background-repeat: no-repeat;\n    }\n</style>\n<body>\n<h2 align=\"center\">Welcome to Technical Round</h2>\n<p>\nPlease note:<br>\n1. Hit Enter button to respond<br>\n2. Each segment has 3 questions with 4 options each.<br>\n3. Answer only with the option number(1/2/3/4).<br>\n4. Every right answer is awarded 1 mark(no negative marking).<br>\n5. Passing criteria is 6 marks.<br>\n6. Click on Next after finishing.<br>\n</p>\n</body>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 650,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd10a3e.2152a6",
+        "type": "ui_template",
+        "z": "96d961f0.c58e6",
+        "group": "7a08cad.8368334",
+        "name": "",
+        "order": 3,
+        "width": 6,
+        "height": 3,
+        "format": "<style>\n    p{\n        font-size: 18px;\n    }\n</style>\n<h3 align=\"center\">Assestment Round</h3>\n<p>\nPlease note:<br>\n1. Answer the following questions with minimum 50 words each.<br>\n2. Click the submit button to submit the test.<br>\n</p>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 260,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a38e6af4.3c7df8",
+        "type": "pdf-hummus",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "filename": "",
+        "split": false,
+        "mode": {
+            "value": "asBuffer"
+        },
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "44b0d61a.e186e8"
+            ]
+        ]
+    },
+    {
+        "id": "34a856aa.7aeffa",
+        "type": "ui_template",
+        "z": "96d961f0.c58e6",
+        "group": "98e5d511.09be28",
+        "name": "BG",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "format": "<!--<div ng-bind-html=\"msg.payload\"></div>-->\n<style>\n    body{\n        background-image: url(\"https://i.ibb.co/ynH1d4V/wp2848515-hd-technology-wallpapers-1080p-20200707213303521.jpg\");\n        background-size: cover;\n         background-position: center;\n         background-repeat: no-repeat;\n    }\n</style>\n<body>\n  \n</body>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ed5e3a7.1d838c",
+        "type": "cloudant out",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "4e86110.c42b5f",
+        "database": "candidate_details",
+        "service": "air-cloudant-1594112282541-41063",
+        "payonly": true,
+        "operation": "insert",
+        "x": 2510,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d71daa26.c84ef8",
+        "type": "ui_toast",
+        "z": "96d961f0.c58e6",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Ok",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "Selected",
+        "x": 2060,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a052f2e8.f25c9",
+        "type": "ui_toast",
+        "z": "96d961f0.c58e6",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "Rejected",
+        "x": 2520,
+        "y": 280,
+        "wires": [
+            [
+                "a0d25145.b3a72"
+            ]
+        ]
+    },
+    {
+        "id": "7221ac75.eed934",
+        "type": "change",
+        "z": "96d961f0.c58e6",
+        "name": "set payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "null",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f3a9cab.59e223",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2490,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7db5058a.b58e1c",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2470,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "171f6b60.b581a5",
+        "type": "ui_toast",
+        "z": "96d961f0.c58e6",
+        "position": "dialog",
+        "displayTime": "10",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Ok",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 850,
+        "y": 1360,
+        "wires": [
+            [
+                "2bde4069.d7b26"
+            ]
+        ]
+    },
+    {
+        "id": "68403692.1a7c78",
+        "type": "http response",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "x": 430,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "44b2db4a.b6b654",
+        "type": "template",
+        "z": "96d961f0.c58e6",
+        "name": "html",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<style>\n    body{\n        background-image: url(\"https://i.ibb.co/DWCnsV0/wp2848515-hd-technology-wallpapers-1080p-20200707212653252-20200710220004581.jpg\");\n        background-size: cover;\n         background-position: center;\n         background-repeat: no-repeat;\n    }\n</style>\n<head>\n    <meta http-equiv=\"refresh\" content=\"5;URL='https://teamair.mybluemix.net/ui/'\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n</head>\n<body>\n<div class=\"container jumbotron\">\n<h2>Congrats Your Resume Has Been uploaded and scanned by our system!</h2>\n<h4>You will be redirected automatically.</h4>\n<button class=\"btn btn-secondary btn-lg\" onclick=\"goBack()\">Click here to manually redirect</button>\n</div>\n\n\n<script>\nfunction goBack() {\n  window.history.back();\n}\n\n</script>\n\n</body>\n\n",
+        "output": "str",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "68403692.1a7c78"
+            ]
+        ]
+    },
+    {
+        "id": "5038b5a6.da317c",
+        "type": "delay",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aed96262.c8fdd",
+        "type": "delay",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "8",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "a38e6af4.3c7df8"
+            ]
+        ]
+    },
+    {
+        "id": "ea85993f.03c9b8",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "func": "var email = global.get(\"email\");\n\nmsg.payload = {\n    \"_id\":email,\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 1440,
+        "wires": [
+            [
+                "746238c0.01a7f8"
+            ]
+        ]
+    },
+    {
+        "id": "746238c0.01a7f8",
+        "type": "cloudant in",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "cloudant": "87e74db3.e9e75",
+        "database": "candidate_details",
+        "service": "air-cloudant-1594112282541-41063",
+        "search": "_id_",
+        "design": "",
+        "index": "",
+        "x": 830,
+        "y": 1440,
+        "wires": [
+            [
+                "79a434df.3c15bc"
+            ]
+        ]
+    },
+    {
+        "id": "6168ed63.a4f384",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 430,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ff25bdf2.d16d9",
+        "type": "ui_template",
+        "z": "96d961f0.c58e6",
+        "group": "7a08cad.8368334",
+        "name": "BG3",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "format": "<!--<div ng-bind-html=\"msg.payload\"></div>-->\n<style>\n    body{\n        background-image: url(\"https://i.ibb.co/ynH1d4V/wp2848515-hd-technology-wallpapers-1080p-20200707213303521.jpg\");\n        background-size: cover;\n         background-position: center;\n         background-repeat: no-repeat;\n    }\n</style>\n<body>\n  \n</body>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 250,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5216d18c.c2ebf",
+        "type": "ui_template",
+        "z": "96d961f0.c58e6",
+        "group": "968dd38a.04f26",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "6",
+        "format": "<head>\n    <style>\n        h1{\n            font-size: 50px;\n        }\n        h1,h4{\n            text-align: center;\n            font-family: \"Times New Roman\", Times, serif;\n        }\n    </style>\n    <!--<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">-->\n</head>\n<body>\n    <!--<div class=\"container jumbotron\">-->\n        <h1>Thank you for using AIR.</h1>\n        <h4></h4><a href=\"http://teamairibm.000webhostapp.com/\">Click to go back to homepage.</a></h4>\n    <!--</div>-->\n</body>\n<!--<div ng-bind-html=\"msg.payload\"></div>-->",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1440,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bde4069.d7b26",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "selected",
+        "func": "\nmsg.payload = {\"tab\":\"Thank you\"};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1060,
+        "y": 1360,
+        "wires": [
+            [
+                "e9bbed2.423861"
+            ]
+        ]
+    },
+    {
+        "id": "e9bbed2.423861",
+        "type": "ui_ui_control",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "events": "change",
+        "x": 1240,
+        "y": 1360,
+        "wires": [
+            [
+                "5216d18c.c2ebf"
+            ]
+        ]
+    },
+    {
+        "id": "95f6a684.a82c78",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "selected",
+        "func": "var totalscore = global.get(\"totalscore\");\n\nif(totalscore < 6){\nmsg.payload = {\"tab\":\"Thank you\"};\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1260,
+        "y": 920,
+        "wires": [
+            [
+                "cfa7b5.b8689848"
+            ]
+        ]
+    },
+    {
+        "id": "cfa7b5.b8689848",
+        "type": "ui_ui_control",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "events": "change",
+        "x": 1340,
+        "y": 1040,
+        "wires": [
+            [
+                "5216d18c.c2ebf"
+            ]
+        ]
+    },
+    {
+        "id": "ce301ea6.36422",
+        "type": "change",
+        "z": "96d961f0.c58e6",
+        "name": "clear_input",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 130,
+        "y": 1080,
+        "wires": [
+            [
+                "46c7940f.2379cc"
+            ]
+        ]
+    },
+    {
+        "id": "1ac03a4e.909b86",
+        "type": "change",
+        "z": "96d961f0.c58e6",
+        "name": "clear_input",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ans1",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.ans2",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.ans3",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 1220,
+        "wires": [
+            [
+                "6c8ad84f.b4f5d8"
+            ]
+        ]
+    },
+    {
+        "id": "79a434df.3c15bc",
+        "type": "debug",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "a0d25145.b3a72",
+        "type": "function",
+        "z": "96d961f0.c58e6",
+        "name": "selected",
+        "func": "\n\n\nmsg.payload = {\"tab\":\"Thank you\"};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 2700,
+        "y": 320,
+        "wires": [
+            [
+                "c4f343ad.3f5f2"
+            ]
+        ]
+    },
+    {
+        "id": "c4f343ad.3f5f2",
+        "type": "ui_ui_control",
+        "z": "96d961f0.c58e6",
+        "name": "",
+        "events": "change",
+        "x": 2780,
+        "y": 440,
+        "wires": [
+            [
+                "5216d18c.c2ebf"
+            ]
+        ]
+    },
+    {
+        "id": "87e74db3.e9e75",
+        "type": "cloudant",
+        "z": "",
+        "host": "myaccountname.cloudant.com",
+        "name": "My Cloudant account"
+    },
+    {
+        "id": "4e86110.c42b5f",
+        "type": "cloudant",
+        "z": "",
+        "host": "0e12c4a1-5fdb-46ec-9a39-280b845b7467-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "candidate_details"
+    },
+    {
+        "id": "f10dcae4.b27918",
+        "type": "ui_group",
+        "z": "",
+        "name": "Step 2",
+        "tab": "ee6961a3.c2879",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "98e5d511.09be28",
+        "type": "ui_group",
+        "z": "",
+        "name": "Step 1",
+        "tab": "adcd1ad2.95b348",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7a08cad.8368334",
+        "type": "ui_group",
+        "z": "",
+        "name": "Step 3",
+        "tab": "c2aebad2.83d408",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "968dd38a.04f26",
+        "type": "ui_group",
+        "z": "",
+        "name": "Thanks",
+        "tab": "1ededa40.89e8e6",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ee6961a3.c2879",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Technical Round",
+        "icon": "build",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "adcd1ad2.95b348",
+        "type": "ui_tab",
+        "z": "96d961f0.c58e6",
+        "name": "Registration",
+        "icon": "assignment_ind",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c2aebad2.83d408",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Assessment Test",
+        "icon": "face",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1ededa40.89e8e6",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Thank you",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]
